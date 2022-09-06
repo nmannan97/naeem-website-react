@@ -1,0 +1,51 @@
+#about {
+    background: url("../assets/pictures/Backgroundmain.jpeg");
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 10vh;
+    padding-left: calc(5vw + 10px);
+    padding-right: calc(5vw + 10px)
+    
+    
+}
+#about_welcome{
+    padding-top: 10vh;
+}
+#about_me{
+    text-align: left;
+}
+
+#about_me0{
+    height: 400px;
+    border-radius: 100%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#about_grad{
+    border-radius: 20px;
+}
+.about_font{
+    font: italic calc(5vw + 0.5em) "Fira Sans", serif;
+    color: white;
+}
+
+.about_container{
+    display: flex;
+    column-count: auto;
+    justify-content: center;
+    margin: auto;
+
+}
+.about_row{
+    display: flex;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+.about_polaroid{
+    background-color: white;
+    height: auto;
+    padding-bottom: 100px;
+}
