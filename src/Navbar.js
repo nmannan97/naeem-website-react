@@ -14,14 +14,14 @@ function Navbar(){
                     <span className="navbar_hamburgerline line3"></span>
                 </div>
 
-                <Link className='navbar_profile_link'  to='/'>
+                <Link className='navbar_profile_link'  to='/naeem-website-react/'>
                     <p className='navbar_font'> Naeem Mannan </p>
                 </Link>
             </div>
             <input type='checkbox'/>
             <ul className='navbar_menu_items'>
                 <li>
-                    <Link to='/'>About</Link>
+                    <Link to='/naeem-website-react/'>About</Link>
                 </li>
                 <li>
                     <Link to='/naeem-website-react/projects'>Projects</Link>
