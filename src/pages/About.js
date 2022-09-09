@@ -19,12 +19,12 @@ export default function About(){
         <>
             <Navbar />
             <div id="about">
-                <header className="about_font" id="about_welcome">
+                <header className="about_generalFont" id="about_welcome">
                     <p>Hello, and welcome to my home page!</p>
                     Here's a little about me... 
                 </header>
                 <img id="about_me0" src={Me0} />
-                <p id="about_me" className="about_font">
+                <p id="about_me" className="about_generalFont">
                     I was born and raised in San Jose bay area. There I went to Elementry, Middle, and High school there. 
                     From there I went to San Jose State University and graduated in Electrical Engineering in 4 years. 
                     As pictured below is me graduating from San Jose State.
@@ -47,7 +47,7 @@ export default function About(){
                     </ul>
                 </div>
 
-                <p className="about_font"> I then went to work in places such as Global Foundries, Western Digital, Tezerakt/Google, and now Quest Global/Meta</p>
+                <p className="about_generalFont"> I then went to work in places such as Global Foundries, Western Digital, Tezerakt/Google, and now Quest Global/Meta</p>
                 <div className="about_container" >
                     <ul>
                         <li className="about_row">
