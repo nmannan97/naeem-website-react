@@ -36,12 +36,13 @@ export default function About(){
                                 <img id="about_grad" src={Me1}/>
                                 <p id="about_polaroid1" >Ready for the workforce!</p>
                             </div>
-                        </li>
-                        <li className="about_row">
                             <div className="about_polaroid">
                                 <img src={SJ}/>
                                 <p>The city I grew up in</p>
                             </div>
+                        </li>
+                        <li className="about_row">
+                            
                         </li>
                     </ul>
                 </div>
