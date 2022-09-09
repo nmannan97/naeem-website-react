@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/naeem-website-react/static/css/main.4fffacd5.css",
+    "main.js": "/naeem-website-react/static/js/main.895cf416.js",
+    "static/js/787.1707416d.chunk.js": "/naeem-website-react/static/js/787.1707416d.chunk.js",
+    "static/media/Radar.gif": "/naeem-website-react/static/media/Radar.652901d203882317ea22.gif",
+    "static/media/RobotLeg.gif": "/naeem-website-react/static/media/RobotLeg.e321890cb403028a6e0d.gif",
+    "static/media/Concordia.jpg": "/naeem-website-react/static/media/Concordia.3c4cf9d7048aaf45dcd9.jpg",
+    "static/media/RobotLeg.png": "/naeem-website-react/static/media/RobotLeg.cadaa238cf9598117281.png",
+    "static/media/SanJose.png": "/naeem-website-react/static/media/SanJose.dedb38f2d60a5c2925e1.png",
+    "static/media/Lords_Of_Vegas_Board_Game.jpg": "/naeem-website-react/static/media/Lords_Of_Vegas_Board_Game.a1e6683d2e1fb043997e.jpg",
+    "static/media/Coup.jpg": "/naeem-website-react/static/media/Coup.0208a8ad61eb819c3859.jpg",
+    "static/media/MeAndCat.jpg": "/naeem-website-react/static/media/MeAndCat.293c377f9b2188720ebf.jpg",
+    "static/media/PCB,RevC.jpg": "/naeem-website-react/static/media/PCB,RevC.08558c3bb61533ce6770.jpg",
+    "static/media/Untitled.jpeg": "/naeem-website-react/static/media/Untitled.f17f3d77d9928f8b2270.jpeg",
+    "static/media/Award.jpg": "/naeem-website-react/static/media/Award.22519021e9938505eee2.jpg",
+    "static/media/dish.jpg": "/naeem-website-react/static/media/dish.107fcd617f9f9c604860.jpg",
+    "static/media/PCB,RevC2.jpg": "/naeem-website-react/static/media/PCB,RevC2.652cd0727c98e2434bb5.jpg",
+    "static/media/GF.png": "/naeem-website-react/static/media/GF.7a7b42c534f97e5461f3.png",
+    "static/media/GradPic3.jpg": "/naeem-website-react/static/media/GradPic3.7088a4f36058c047d345.jpg",
+    "static/media/PipBoy2.PNG": "/naeem-website-react/static/media/PipBoy2.174bc120717c97e35a53.PNG",
+    "static/media/WD.png": "/naeem-website-react/static/media/WD.6f5b8479d769664c616e.png",
+    "static/media/Backgroundmain.jpeg": "/naeem-website-react/static/media/Backgroundmain.b8be41752cf2ccffd3b7.jpeg",
+    "static/media/PipBoy.PNG": "/naeem-website-react/static/media/PipBoy.c80efd99c1d84283898b.PNG",
+    "static/media/Google.png": "/naeem-website-react/static/media/Google.a20546601905290a523a.png",
+    "static/media/Meta.png": "/naeem-website-react/static/media/Meta.58c7bf94376882935ff5.png",
+    "index.html": "/naeem-website-react/index.html",
+    "main.4fffacd5.css.map": "/naeem-website-react/static/css/main.4fffacd5.css.map",
+    "main.895cf416.js.map": "/naeem-website-react/static/js/main.895cf416.js.map",
+    "787.1707416d.chunk.js.map": "/naeem-website-react/static/js/787.1707416d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fffacd5.css",
+    "static/js/main.895cf416.js"
+  ]
+}
