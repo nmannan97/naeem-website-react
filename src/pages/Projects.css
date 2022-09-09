@@ -1,0 +1,48 @@
+#projects{
+    background: url('../assets/pictures/Backgroundmain.jpeg');
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    min-height: 100vh;
+    padding: 150px;
+}
+
+#projects ol li div img{
+    height: 640px;
+    width: 480px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+}
+
+#projects ol li{
+    list-style-type: none;
+    width: 100%;
+    justify-content: center;
+}
+#projects ol li p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#projects ol li div{
+    
+    list-style-type: none;
+    background-color: white;
+    height: 790px;
+    width: 540px;
+    padding-top: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+#projects ol li div p{
+    font-size: 2rem;
+}
+
+.projects_generalFont{
+    font: italic calc(2vw + 0.5em) "Fira Sans", serif;
+    color: white;
+    text-align: center;
+}

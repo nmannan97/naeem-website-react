@@ -1,0 +1,49 @@
+#interests{
+    background: url("../assets/pictures/Backgroundmain.jpeg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 150px;
+
+}
+#interests ul{
+    display: inline-flex;
+    justify-content: center;
+}
+
+#interests ul li{
+    justify-content: center;
+    list-style-type: none;
+}
+
+#interests ul li div{
+    justify-content: center;
+    background-color: white;
+    width: 540px;
+    height: 760px;
+    list-style-type: none;
+    padding-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#interests ul li div p{
+    font-size: 2rem;
+
+}
+
+#interests ul li img{
+    height: 640px;
+    width: 480px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+}
+
+.interests_generalFont{
+    font: italic calc(2vw + 0.5em) "Fira Sans", serif;
+    color: white;
+    margin-left: 400px;
+    margin-right: 400px;
+}

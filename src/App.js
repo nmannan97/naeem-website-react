@@ -2,6 +2,7 @@ import {Route, Routes} from 'react-router-dom'
 
 import About from './pages/About'
 import Projects from './pages/Projects';
+import Interests from './pages/Interests'
 
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<About/>} />
         <Route exact path='/projects' element={<Projects/>}/>
+        <Route exact path='/interests' element={<Interests/>}/>
       </Routes>
     </div>
   );

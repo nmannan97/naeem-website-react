@@ -26,26 +26,38 @@
     border-radius: 20px;
 }
 .about_font{
-    font: italic calc(5vw + 0.5em) "Fira Sans", serif;
+    font: italic calc(2vw + 0.5em) "Fira Sans", serif;
     color: white;
 }
 
 .about_container{
     display: flex;
-    column-count: auto;
+    flex-wrap: wrap;
+    width: 100vw;
     justify-content: center;
     margin: auto;
-
 }
 .about_row{
-    display: flex;
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto;
+    flex: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
 }
 .about_polaroid{
     background-color: white;
     height: auto;
     padding-bottom: 100px;
+    margin-bottom: 110px;
+    padding: 10px;
+}
+
+.about_container ul li{
+    list-style-type: none;
+    font: italic 2rem "Fira Sans", serif;
+
+}
+
+.about_container ul li img{
+    height: 640px;
+    width: 480px;
 }

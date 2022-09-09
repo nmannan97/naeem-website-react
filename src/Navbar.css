@@ -51,6 +51,8 @@ a {
     font: italic 1.5em "Fira Sans", serif;
     color: white;
     margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .navbar .navbar_container{
@@ -135,7 +137,8 @@ a {
   .navbar .navbar_font{
     font: italic 0.5em "Fira Sans", serif;
     color: white;
-    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .navbar .navbar_container{
@@ -197,7 +200,7 @@ a {
     margin-top: 75px;
     background: #fff;
     height: 300px;
-    width: 100vw;
+    width: 200vw;
     transform: translate(150%);
     display: flex;
     flex-direction: column;
@@ -223,7 +226,7 @@ a {
   }
 
   .navbar input[type="checkbox"]:checked ~ .navbar_menu_items {
-    transform: translateX(-25%);
+    transform: translateX(0);
   }
 
   /* When a user hovers, focuses or if the link is active change the background */

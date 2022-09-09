@@ -27,6 +27,9 @@ function Navbar(){
                     <Link to='/projects'>Projects</Link>
                 </li>
                 <li>
+                    <Link to='/interests'>interests</Link>
+                </li>
+                <li>
                     <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'>Linkedin</a>
                 </li>
             </ul>
