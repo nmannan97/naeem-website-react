@@ -199,7 +199,7 @@ a {
   .navbar .navbar_menu_items{
     margin-top: 75px;
     background: #fff;
-    height: 300px;
+    height: 400px;
     width: 200vw;
     transform: translate(150%);
     display: flex;
@@ -226,7 +226,7 @@ a {
   }
 
   .navbar input[type="checkbox"]:checked ~ .navbar_menu_items {
-    transform: translateX(0);
+    transform: translateX(-15%);
   }
 
   /* When a user hovers, focuses or if the link is active change the background */
