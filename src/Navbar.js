@@ -24,10 +24,10 @@ function Navbar(){
                     <Link to='/'>About</Link>
                 </li>
                 <li>
-                    <Link to='/projects'>Projects</Link>
+                    <Link to='/naeem-website-react/projects'>Projects</Link>
                 </li>
                 <li>
-                    <Link to='/interests'>interests</Link>
+                    <Link to='/naeem-website-react/interests'>interests</Link>
                 </li>
                 <li>
                     <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'>Linkedin</a>
