@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/naeem-website-react/static/css/main.4fffacd5.css",
-    "main.js": "/naeem-website-react/static/js/main.895cf416.js",
+    "main.css": "/naeem-website-react/static/css/main.5604a9e5.css",
+    "main.js": "/naeem-website-react/static/js/main.0540b228.js",
     "static/js/787.1707416d.chunk.js": "/naeem-website-react/static/js/787.1707416d.chunk.js",
     "static/media/Radar.gif": "/naeem-website-react/static/media/Radar.652901d203882317ea22.gif",
     "static/media/RobotLeg.gif": "/naeem-website-react/static/media/RobotLeg.e321890cb403028a6e0d.gif",
@@ -25,12 +25,12 @@
     "static/media/Google.png": "/naeem-website-react/static/media/Google.a20546601905290a523a.png",
     "static/media/Meta.png": "/naeem-website-react/static/media/Meta.58c7bf94376882935ff5.png",
     "index.html": "/naeem-website-react/index.html",
-    "main.4fffacd5.css.map": "/naeem-website-react/static/css/main.4fffacd5.css.map",
-    "main.895cf416.js.map": "/naeem-website-react/static/js/main.895cf416.js.map",
+    "main.5604a9e5.css.map": "/naeem-website-react/static/css/main.5604a9e5.css.map",
+    "main.0540b228.js.map": "/naeem-website-react/static/js/main.0540b228.js.map",
     "787.1707416d.chunk.js.map": "/naeem-website-react/static/js/787.1707416d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fffacd5.css",
-    "static/js/main.895cf416.js"
+    "static/css/main.5604a9e5.css",
+    "static/js/main.0540b228.js"
   ]
 }
