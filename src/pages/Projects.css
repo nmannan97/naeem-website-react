@@ -4,6 +4,7 @@
     overflow: hidden;
     height: auto;
     min-height: 100vh;
+    padding-top: 100px;
 }
 
 #projects ol li div img{
@@ -75,28 +76,34 @@
     #projects ol li p{
         padding-top: 20px;
         padding-bottom: 20px;
+        margin: auto;
     }
     
     #projects ol li div{
         display: inline-block;
         list-style-type: none;
         background-color: white;
-        height: 400px;
+        height: 350px;
         width: 180px;
         padding-top: 20px;
         justify-content: center;
         margin-bottom: 20px;
         margin-top: 20px;
+        border-radius: 20px;
     }
     
     #projects ol li div p{
         font-size: 1.5rem;
-    }
+        width: 200px;
+        text-align: center;
+        justify-content: center;
+    }   
     
     .projects_generalFont{
         font: italic calc(2vw + 0.5em) "Fira Sans", serif;
         color: white;
         text-align: center;
-        min-width: 300px;
+        width: 200px;
+        margin: auto;
     }
 }
