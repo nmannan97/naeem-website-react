@@ -4,7 +4,6 @@
     overflow: hidden;
     height: auto;
     min-height: 100vh;
-    padding: 150px;
 }
 
 #projects ol li div img{
@@ -50,14 +49,13 @@
     text-align: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
     #projects{
         background: url('../assets/pictures/Backgroundmain.jpeg');
         background-size: cover;
         overflow: hidden;
         height: auto;
         min-height: 100vh;
-        padding: 150px;
     }
     
     #projects ol li div img{
@@ -71,9 +69,8 @@
     
     #projects ol li{
         list-style-type: none;
-        width: 100%;
         justify-content: center;
-        
+                
     }
     #projects ol li p{
         padding-top: 20px;
@@ -88,9 +85,6 @@
         width: 180px;
         padding-top: 20px;
         justify-content: center;
-        margin: auto;
-        margin-left: 30px;
-        margin-right: 30px;
         margin-bottom: 20px;
         margin-top: 20px;
     }
@@ -103,5 +97,6 @@
         font: italic calc(2vw + 0.5em) "Fira Sans", serif;
         color: white;
         text-align: center;
+        min-width: 300px;
     }
 }

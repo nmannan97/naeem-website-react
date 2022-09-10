@@ -4,7 +4,7 @@
     overflow: hidden;
     height: auto;
     min-height: 100vh;
-    padding: 150px;
+    padding-top: 150px;
 }
 
 #about img{
@@ -67,7 +67,7 @@
         overflow: hidden;
         height: auto;
         min-height: 100vh;
-        padding: 150px;
+        padding-top: 150px;
     }
     
     #about img{

@@ -226,7 +226,7 @@ a {
   }
 
   .navbar input[type="checkbox"]:checked ~ .navbar_menu_items {
-    transform: translateX(-15%);
+    transform: translateX(-25%);
   }
 
   /* When a user hovers, focuses or if the link is active change the background */
