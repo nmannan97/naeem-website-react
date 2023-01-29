@@ -3,6 +3,7 @@ import {React, useState} from "react";
 import './Projects.css'
 
 import Navbar from "../Navbar";
+import Comments from "../Comments";
 
 import RadarDish from '../assets/pictures/projects/RadarDish/dish.jpg';
 import RadarDishVideo from "../assets/pictures/projects/RadarDish/Radar.gif";
@@ -47,6 +48,7 @@ export default function Projects(){
                             and communicate via serial communications. Hover over the picture to view the gif. This is a SDR.
                         </p>           
                     </li>
+                    
                     <li>
                         <p className="projects_generalFont">Robotic leg ~</p>
                         <div>
