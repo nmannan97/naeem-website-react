@@ -21,13 +21,13 @@ function Navbar(){
             <input type='checkbox'/>
             <ul className='navbar_menu_items'>
                 <li>
-                    <Link to='/naeem-website-react/'>About</Link>
+                    <Link to='/'>About</Link>
                 </li>
                 <li>
-                    <Link to='/naeem-website-react/projects'>Projects</Link>
+                    <Link to='/projects'>Projects</Link>
                 </li>
                 <li>
-                    <Link to='/naeem-website-react/interests'>interests</Link>
+                    <Link to='/interests'>interests</Link>
                 </li>
                 <li>
                     <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'>Linkedin</a>
