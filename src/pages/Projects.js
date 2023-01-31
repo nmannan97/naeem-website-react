@@ -3,7 +3,6 @@ import {React, useState} from "react";
 import './Projects.css'
 
 import Navbar from "../Navbar";
-import Comments from "../Comments";
 
 import RadarDish from '../assets/pictures/projects/RadarDish/dish.jpg';
 import RadarDishVideo from "../assets/pictures/projects/RadarDish/Radar.gif";
