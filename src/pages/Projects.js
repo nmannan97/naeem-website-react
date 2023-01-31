@@ -31,6 +31,7 @@ export default function Projects(){
         <>  
             <Navbar />
             <div id="projects">
+
                 <p className="projects_generalFont"> Welcome to my projects page!</p>
                 <p className="projects_generalFont"> Here are some of my projects...</p>
                 <ol>
@@ -48,7 +49,6 @@ export default function Projects(){
                             and communicate via serial communications. Hover over the picture to view the gif. This is a SDR.
                         </p>           
                     </li>
-                    
                     <li>
                         <p className="projects_generalFont">Robotic leg ~</p>
                         <div>
@@ -93,7 +93,10 @@ export default function Projects(){
                         </p>              
                     </li>
                 </ol>
+                <Comments />
+
             </div>
+
         </>
     )
 }

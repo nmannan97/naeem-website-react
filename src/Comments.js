@@ -1,32 +1,49 @@
 import React from "react";
 import { useState } from "react";
 
+import "./comments.css"
+
 export default function Comments(){
     
-    var commentArray = []
-
-    const [comment, setComment] = useState("")
-
-    function comments(){
-        commentArray +=  comment
-        let returnHTML = <></>
-        for(var index = 0; index<commentArray.length; index++){
-            returnHTML += <p className="comments_comment">{commentArray[index]}</p>
-
+    const [comment, setComment] = useState("");
+    const [comments, setComments] = useState([]);
+    const [counter, setCounter] = useState(0);
+    
+    function commentSection(){
+        let returnHtml = '<ul id="comments_section">';
+        for(var index= 0;index<comments.length;index++){
+            returnHtml += "<li><p className='comments_comments'>"
+            returnHtml += comments[index]
+            returnHtml += "</p></li>"
         }
-        return returnHTML
+        returnHtml += '</ul>'
+        
+
+        document.getElementById('comments_container_sub').innerHTML = returnHtml
     }
-    function commentCapture(){
-        comment = document.getElementById("comments_entry")
-        setComment(comment)
+    function commentCapture(Comment)
+    {
+        setComment(Comment)
+        console.log(comment)
+    }
+    function commentEnter(){
+        comments.push(comment)
+        setCounter(counter + 1)
+        setComments(comments)
+        setComment("")
+        commentSection()
+        console.log(counter)
+        console.log(comments)
+        
     }
     return(
         <>
             <div id="comments">
-                <button id="comments_enter" onClick={commentCapture()}>Press me to enter a comment</button>
                 <div id="comments_conatiner_main">
-                    <input id="comments_entry" type="text"/>
-                    {comments()}
+                    <input id="comments_entry" type="text" onChange={(e) => commentCapture(e.target.value)}/>
+                    <button id='comments_enter' onClick={(e) => commentEnter()}>Press me to enter a comment</button>
+                </div>
+                <div id="comments_container_sub">
                 </div>
             </div>
         </>
