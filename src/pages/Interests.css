@@ -1,5 +1,5 @@
 #interests{
-    background: url("../assets/pictures/Backgroundmain.jpeg");
+    background: url("../assets/pictures/Backgroundmain.jpg");
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,7 +50,7 @@
 
 @media (max-width: 900px) {
     #interests{
-        background: url("../assets/pictures/Backgroundmain.jpeg");
+        background: url("../assets/pictures/Backgroundmain.jpg");
         min-height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;

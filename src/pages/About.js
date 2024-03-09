@@ -4,7 +4,7 @@ import './About.css'
 
 import Navbar from "../Navbar";
 
-import Me0 from '../assets/pictures/Untitled.jpeg'
+import Me0 from '../assets/pictures/Untitled.jpg'
 import Me1 from '../assets/pictures/GradPic3.jpg'
 import SJ from '../assets/pictures/SanJose.png'
 

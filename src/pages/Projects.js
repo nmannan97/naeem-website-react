@@ -31,15 +31,15 @@ export default function Projects(){
         <>  
             <Navbar />
             <div id="projects">
-
                 <p className="projects_generalFont"> Welcome to my projects page!</p>
                 <p className="projects_generalFont"> Here are some of my projects...</p>
+
                 <ol>
                     <li>
                         <p className="projects_generalFont">Radar dish ~</p>
                         <div>
-                            <img id="projects_radar_dish" src={picture === RadarDishVideo ? picture : RadarDish } onClick={imageClick}/>
-                            <p>{picture === RadarDishVideo ? wording : 'click me'}</p>
+                            <iframe src="https://player.vimeo.com/video/921326896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="360" height="640" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Radar dish demo"></iframe>                            
+                            <p>My radar dish</p>
                         </div>            
                         
                         <p className="projects_generalFont">
@@ -52,8 +52,8 @@ export default function Projects(){
                     <li>
                         <p className="projects_generalFont">Robotic leg ~</p>
                         <div>
-                            <img id="projects_robot_leg" src={picture === RobotLegVideo ? picture : RobotLeg } onClick={imageClick}/>
-                            <p>{picture === RobotLegVideo ? wording : 'click me'}</p>
+                            <iframe src="https://player.vimeo.com/video/921328085?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="360" height="640" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="RobotLeg demo"></iframe>                            
+                            <p>My robotic leg</p>
                         </div>         
                         <p className="projects_generalFont">
                             Individual robotic leg project where I designed a leg like structure and used a microcontroller to move the 
@@ -93,7 +93,7 @@ export default function Projects(){
                         </p>              
                     </li>
                 </ol>
-                <Comments />
+
 
             </div>
 

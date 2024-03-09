@@ -1,5 +1,5 @@
 #about{
-    background: url('../assets/pictures/Backgroundmain.jpeg');
+    background: url('../assets/pictures/Backgroundmain.jpg');
     background-size: cover;
     overflow: hidden;
     height: auto;
@@ -61,7 +61,7 @@
 
 @media (max-width: 900px) {
     #about{
-        background: url('../assets/pictures/Backgroundmain.jpeg');
+        background: url('../assets/pictures/Backgroundmain.jpg');
         background-size: cover;
         overflow: hidden;
         height: auto;
