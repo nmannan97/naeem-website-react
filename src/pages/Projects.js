@@ -9,8 +9,8 @@ import RadarDish from '../assets/pictures/projects/RadarDish/dish.jpg';
 import RadarDishVideo from "../assets/pictures/projects/RadarDish/Radar.gif";
 import RobotLeg from "../assets/pictures/projects/RoboticLeg/RobotLeg.png";
 import RobotLegVideo from "../assets/pictures/projects/RoboticLeg/RobotLeg.gif";
-import pipBoy0 from "../assets/pictures/projects/pipboy/PipBoy.png";
-import pipBoy1 from "../assets/pictures/projects/pipboy/PipBoy2.png";
+import pipBoy0 from "../assets/pictures/projects/Pipboy/PipBoy.png";
+import pipBoy1 from "../assets/pictures/projects/Pipboy/PipBoy2.png";
 import PCB0 from "../assets/pictures/projects/RoboticsClub/PCB,RevC.jpg";
 import PCB1 from "../assets/pictures/projects/RoboticsClub/PCB,RevC2.jpg";
 
