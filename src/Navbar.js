@@ -14,7 +14,7 @@ function Navbar(){
                     <span className="navbar_hamburgerline line3"></span>
                 </div>
 
-                <Link className='navbar_profile_link'  to='/naeem-website-react/'>
+                <Link className='navbar_profile_link'  to='/'>
                     <p className='navbar_font'> Naeem Mannan </p>
                 </Link>
             </div>

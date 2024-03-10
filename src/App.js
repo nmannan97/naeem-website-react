@@ -12,7 +12,6 @@ function App() {
 
       <Routes>
         <Route exact path='/' element={<About/>} />
-        <Route exact path='/naeem-website-react' element={<About/>} />
         <Route exact path='/projects' element={<Projects/>}/>
         <Route exact path='/interests' element={<Interests/>}/>
       </Routes>
