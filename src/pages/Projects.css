@@ -58,6 +58,28 @@
         height: auto;
         min-height: 100vh;
     }
+
+    #radarDish{
+        aspect-ratio: 2/1;
+        justify-content: center;
+        height: 240px;
+        width: 160px;
+        border-radius: 20px;
+        border-style: solid;
+        border-width: 2px;
+        margin-bottom: 10px;
+    }
+
+    #robotLeg{
+        aspect-ratio: 2/1;
+        justify-content: center;
+        height: 240px;
+        width: 160px;
+        border-radius: 20px;
+        border-style: solid;
+        border-width: 2px;
+        margin-bottom: 10px;
+    }
     
     #projects ol li div img{
         height: 240px;
