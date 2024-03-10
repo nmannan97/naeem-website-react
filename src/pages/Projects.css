@@ -17,7 +17,7 @@
 }
 
 #projects_ProjectsList{
-
+    list-style-type: none;
 }
 
 .projects_projectImage{
@@ -26,7 +26,6 @@
 }
 
 #projects_ProjectItem{
-    list-style-type: none;
     width: auto;
     justify-content: center;
     padding-left: 20px;
@@ -57,4 +56,32 @@
     font: italic 5vh "Fira Sans", serif;
     color: white;
     text-align: center;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    .projects_generalFont{
+        font: italic 5vw "Fira Sans", serif;
+        color: white;
+        text-align: center;
+    }
+
+    .projects_projectName{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .projects_generalFont{
+        font: italic 5vw "Fira Sans", serif;
+        color: white;
+        text-align: center;
+    }
+
+    .projects_projectName{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 2.5vw;
+    }
 }
