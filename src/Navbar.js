@@ -33,7 +33,7 @@ function Navbar(){
                     <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'>Linkedin</a>
                 </li>
             </ul>
-        </nav>
+        </nav> 
         </>
     );
 }
