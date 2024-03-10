@@ -7,7 +7,7 @@
     padding-top: 100px;
 }
 
-.projectVideo{
+.projects_Video{
     aspect-ratio: 1/2;
     justify-content: center;
     height: 50vh;
@@ -16,28 +16,30 @@
     margin-bottom: 10px;
 }
 
-#projects ol li div img{
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 10px;
+#projects_ProjectsList{
+
 }
 
-#projects ol li{
+.projects_projectImage{
+    aspect-ratio: 1/1;
+    height: 40vh;
+}
+
+#projects_ProjectItem{
     list-style-type: none;
-    width: 100%;
+    width: auto;
     justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
     
 }
-#projects ol li p{
+.projects_projectName{
     padding-top: 20px;
     padding-bottom: 20px;
-
+    font-size: 2.5vh;
 }
 
-#projects ol li div{
+.projects_projectDiv{
     display: inline-block;
     list-style-type: none;
     background-color: white;
@@ -51,92 +53,8 @@
     padding-right: 20px;
 }
 
-#projects ol li div p{
-    font-size: 2rem;
-}
-
 .projects_generalFont{
-    font: italic calc(2vw + 0.5em) "Fira Sans", serif;
+    font: italic 5vh "Fira Sans", serif;
     color: white;
     text-align: center;
-}
-
-@media (max-width: 500px) {
-    #projects{
-        background: url('../assets/pictures/Backgroundmain.jpg');
-        background-size: cover;
-        overflow: hidden;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    #radarDish{
-        aspect-ratio: 2/1;
-        justify-content: center;
-        height: 240px;
-        width: 160px;
-        border-radius: 20px;
-        border-style: solid;
-        border-width: 2px;
-        margin-bottom: 10px;
-    }
-
-    #robotLeg{
-        aspect-ratio: 2/1;
-        justify-content: center;
-        height: 240px;
-        width: 160px;
-        border-radius: 20px;
-        border-style: solid;
-        border-width: 2px;
-        margin-bottom: 10px;
-    }
-    
-    #projects ol li div img{
-        height: 240px;
-        width: 160px;
-        border-radius: 20px;
-        border-style: solid;
-        border-width: 2px;
-        margin-bottom: 10px;
-    }
-    
-    #projects ol li{
-        list-style-type: none;
-        justify-content: center;
-                
-    }
-    #projects ol li p{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin: auto;
-    }
-    
-    #projects ol li div{
-        display: inline-block;
-        list-style-type: none;
-        background-color: white;
-        height: 350px;
-        width: 180px;
-        padding-top: 20px;
-        justify-content: center;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        border-radius: 20px;
-    }
-    
-    #projects ol li div p{
-        font-size: 1.5rem;
-        width: 200px;
-        text-align: center;
-        justify-content: center;
-    }   
-    
-    .projects_generalFont{
-        font: italic calc(2vw + 0.5em) "Fira Sans", serif;
-        color: white;
-        text-align: center;
-        width: 200px;
-        margin: auto;
-    }
 }

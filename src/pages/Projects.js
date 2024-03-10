@@ -34,12 +34,12 @@ export default function Projects(){
                 <p className="projects_generalFont"> Welcome to my projects page!</p>
                 <p className="projects_generalFont"> Here are some of my projects...</p>
 
-                <ol>
-                    <li>
+                <ol id="projects_ProjectsList">
+                    <li className="projects_ProjectItem">
                         <p className="projects_generalFont">Radar dish ~</p>
-                        <div>
-                            <iframe className="projectVideo" src="https://player.vimeo.com/video/921326896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Radar dish demo"></iframe>                            
-                            <p>My radar dish</p>
+                        <div className="projects_projectDiv">
+                            <iframe className="projects_Video" src="https://player.vimeo.com/video/921326896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Radar dish demo"></iframe>                            
+                            <p className="projects_projectName">My radar dish</p>
                         </div>            
                         
                         <p className="projects_generalFont">
@@ -49,11 +49,11 @@ export default function Projects(){
                             and communicate via serial communications. Hover over the picture to view the gif. This is a SDR.
                         </p>           
                     </li>
-                    <li>
+                    <li className="projects_ProjectItem">
                         <p className="projects_generalFont">Robotic leg ~</p>
-                        <div>
-                            <iframe className="projectVideo" src="https://player.vimeo.com/video/921328085?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="RobotLeg demo"></iframe>                            
-                            <p>My robotic leg</p>
+                        <div className="projects_projectDiv">
+                            <iframe className="projects_Video" src="https://player.vimeo.com/video/921328085?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="RobotLeg demo"></iframe>                            
+                            <p className="projects_projectName">My robotic leg</p>
                         </div>         
                         <p className="projects_generalFont">
                             Individual robotic leg project where I designed a leg like structure and used a microcontroller to move the 
@@ -62,30 +62,30 @@ export default function Projects(){
                             more funds. Hover over the picture to view the gif.
                         </p>              
                     </li>
-                    <li>
+                    <li className="projects_ProjectItem">
                         <p className="projects_generalFont">Pip boy 3000 ~</p>
-                        <div>
-                            <img src={pipBoy0}/>
-                            <p>Pipboy 3000</p>
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={pipBoy0}/>
+                            <p className="projects_projectName">Pipboy 3000</p>
                         </div>         
-                        <div>
-                            <img src={pipBoy1}/>
-                            <p>Pipboy 3000 exploded</p>
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={pipBoy1}/>
+                            <p className="projects_projectName">Pipboy 3000 exploded</p>
                         </div>         
                         <p className="projects_generalFont">
                             Designed a pipboy 3000 using Creo Parametrics as a self started project. Made to be formed, or 3D printed, in plastics
                             and rubbery material like NinjaFlex. 
                         </p>              
                     </li>
-                    <li>
+                    <li className="projects_ProjectItem">
                         <p className="projects_generalFont">Robotics club ~</p>
-                        <div>
-                            <img src={PCB0}/>
-                            <p>PCB designed for my robotics club</p>
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={PCB0}/>
+                            <p className="projects_projectName">PCB designed for my robotics club</p>
                         </div>         
-                        <div>
-                            <img src={PCB1}/>
-                            <p>Revision C PCB</p>
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={PCB1}/>
+                            <p className="projects_projectName">Revision C PCB</p>
                         </div>         
                         <p className="projects_generalFont">
                             This was done in DipTrace where I got to do schematic design layout as well as PCB placement of items. Worked in crossfunctional team
