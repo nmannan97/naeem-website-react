@@ -7,9 +7,16 @@
     padding-top: 100px;
 }
 
+.projectVideo{
+    aspect-ratio: 1/2;
+    justify-content: center;
+    height: 50vh;
+    width: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
 #projects ol li div img{
-    height: 640px;
-    width: 480px;
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
@@ -20,24 +27,28 @@
     list-style-type: none;
     width: 100%;
     justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
     
 }
 #projects ol li p{
     padding-top: 20px;
     padding-bottom: 20px;
+
 }
 
 #projects ol li div{
     display: inline-block;
     list-style-type: none;
     background-color: white;
-    height: 790px;
-    width: 540px;
+    height: 65vh;
     padding-top: 20px;
     justify-content: center;
     margin: auto;
     margin-left: 30px;
     margin-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #projects ol li div p{

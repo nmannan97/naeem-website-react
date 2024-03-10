@@ -38,7 +38,7 @@ export default function Projects(){
                     <li>
                         <p className="projects_generalFont">Radar dish ~</p>
                         <div>
-                            <iframe id="radarDish" src="https://player.vimeo.com/video/921326896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Radar dish demo"></iframe>                            
+                            <iframe className="projectVideo" src="https://player.vimeo.com/video/921326896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Radar dish demo"></iframe>                            
                             <p>My radar dish</p>
                         </div>            
                         
@@ -52,7 +52,7 @@ export default function Projects(){
                     <li>
                         <p className="projects_generalFont">Robotic leg ~</p>
                         <div>
-                            <iframe id="robotLeg" src="https://player.vimeo.com/video/921328085?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="RobotLeg demo"></iframe>                            
+                            <iframe className="projectVideo" src="https://player.vimeo.com/video/921328085?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="RobotLeg demo"></iframe>                            
                             <p>My robotic leg</p>
                         </div>         
                         <p className="projects_generalFont">
