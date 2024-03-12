@@ -16,6 +16,7 @@
     margin-left: auto;
     margin-right: auto;
     height: 55vh;
+    width: 100%;
     border-radius: 20px;
     margin-bottom: 10px;
 }
@@ -29,7 +30,8 @@
 
 .projects_projectImage{
     aspect-ratio: 1/1;
-    width: 30vw;
+    width: 30vh;
+    height: 30vh;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -61,7 +63,7 @@
     list-style-type: none;
     background-color: white;
     height: 70vh;
-    width: 55vw;
+    width: 35vw;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
@@ -78,17 +80,15 @@
     font: italic 5vh "Fira Sans", serif;
     color: white;
     text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (pointer:none), (pointer:coarse) {
     .projects_generalFont{
         font: italic 5vw "Fira Sans", serif;
-        color: white;
-        text-align: center;
-        justify-content: center;
-        margin-left: 10px;
-        margin-right: 10px;
-
     }
 
     .projects_projectName{
@@ -97,13 +97,17 @@
         font-size: 3.5vw;
         text-align: center;
     }
+    .projects_projectImage{
+        width: 30vw;
+        height: auto;
+    }
+
     .projects_projectDiv{
         height: 35vh;
         width: 40vw;
     }
     .projects_Video{
-        width: 30vw;
-        height: auto;
+        height: 22.5vh;
     }
     
 }
