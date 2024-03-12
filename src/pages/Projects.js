@@ -7,10 +7,10 @@ import './Projects.css'
 import Navbar from "../Navbar";
 import Comments from "../Comments";
 
-import RadarDish from '../assets/pictures/projects/RadarDish/dish.jpg';
-import RadarDishVideo from "../assets/pictures/projects/RadarDish/Radar.gif";
+import RadarDish from '../assets/pictures/projects/RadarDish/RadarDish1.png';
+import RadarDish2 from '../assets/pictures/projects/RadarDish/RadarDish.png';
+import RadarDish3 from '../assets/pictures/projects/RadarDish/DishBuilt.jpg';
 import RobotLeg from "../assets/pictures/projects/RoboticLeg/RobotLeg.png";
-import RobotLegVideo from "../assets/pictures/projects/RoboticLeg/RobotLeg.gif";
 import pipBoy0 from "../assets/pictures/projects/Pipboy/PipBoy.png";
 import pipBoy1 from "../assets/pictures/projects/Pipboy/PipBoy2.png";
 import PCB0 from "../assets/pictures/projects/RoboticsClub/PCB,RevC.jpg";
@@ -50,8 +50,20 @@ export default function Projects(){
                         <div className="projects_projectDiv">
                             <iframe className="projects_Video" src="https://player.vimeo.com/video/921326896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Radar dish demo"></iframe>                            
                             <p className="projects_projectName">My radar dish</p>
+                            
                         </div>            
-                        
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={RadarDish}/>
+                            <p className="projects_projectName">Radar dish (Side)</p>
+                        </div>   
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={RadarDish2}/>
+                            <p className="projects_projectName">Radar dish (Front)</p>
+                        </div>   
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={RadarDish3}/>
+                            <p className="projects_projectName">Assembled dish</p>
+                        </div>   
                         <p className="projects_generalFont">
                             Duo project where I designed and built a radar dish, while my partner did the simulations for the project in HFSS. 
                             Along with this I designed a system that would take sample points every 1 degree and then put the average of 5 
