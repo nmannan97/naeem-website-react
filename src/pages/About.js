@@ -14,10 +14,16 @@ import GF from '../assets/pictures/Companies/GF.png'
 import WD from '../assets/pictures/Companies/WD.png'
 import Google from '../assets/pictures/Companies/Google.png'
 import Meta from '../assets/pictures/Companies/Meta.png'
+import Kinekt from '../assets/pictures/Companies/kinectai_logo.jpg'
 
 export default function About(){
 
-    const Images = [ [GF, "Global Foundries"], [WD, "Western Digital"], [Google, "Google/ Tezerakt"], [Meta, "Meta/Quest Global"] ];
+    const Images = [ [GF, "Global Foundries", "QA engineer"],
+        [WD, "Western Digital", "Test engineer"],
+        [Google, "Google/ Tezerakt", "Peak power validation engineer"],
+        [Kinekt, "Kinekt AI", "UI developer and advisor"],
+        [Meta, "Meta/Quest Global", "Test engineer"] 
+    ];
 
     return(
         <>
@@ -58,6 +64,7 @@ export default function About(){
                             <div className="about_polaroid1" key={index}>
                                 <img className="about_workPlaces" src={photos[0]} alt={`Image ${index}`} />
                                 <p className="about_workNames"> {photos[1]} </p>
+                                <p className="about_workNameJob"> Job title: {photos[2]} </p>
                             </div>
                         ))}
                     </Carousel>
