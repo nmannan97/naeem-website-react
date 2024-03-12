@@ -27,7 +27,7 @@ export default function Projects(){
         [RobotLegPic, "Robotic leg", "Robotic leg made with embedded systems and 3D printed"],
         [pipBoy0, "Pipboy 3000", "Pipboy 3000 made with CREO Parametrics CAD"],
         [PCB0, "Robotics club PCB", "Motor PCB made with DipTrace from schematic to PCB to population"] 
-    ];
+    ]; 
 
     return(
         <>  
