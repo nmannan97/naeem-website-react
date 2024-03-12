@@ -5,52 +5,53 @@
     height: auto;
     min-height: 100vh;
     padding-top: 150px;
+    padding-bottom: 20px;
 }
 
-#about img{
+#about_me0{
     height: 640px;
     width: 480px;
     border-radius: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-#about div ul li div img{
-    height: 640px;
-    width: 480px;
+#about_grad{
+    height: 60vh;
+    aspect-ratio: 2/3;
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
     margin-bottom: 10px;
+    display: block;
+    justify-content: center;
+    margin: auto;
 }
 
-#about div ul li{
+#about_city{
+    height: 60vh;
+    aspect-ratio: 2/3;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+}
+
+#about_Item{
     list-style-type: none;
     width: 100%;
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
     
-}
-#about div ul li p{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#about div ul li div{
-    display: inline-block;
-    list-style-type: none;
-    background-color: white;
-    height: 790px;
-    width: 540px;
-    padding-top: 20px;
-    justify-content: center;
-    margin: auto;
- 
-}
-
-#about div ul li div p{
-    font-size: 2rem;
 }
 
 .about_generalFont{
@@ -59,35 +60,66 @@
     text-align: center;
 }
 
-@media (max-width: 900px) {
-    #about{
-        background: url('../assets/pictures/Backgroundmain.jpg');
-        background-size: cover;
-        overflow: hidden;
-        height: auto;
-        min-height: 100vh;
-        padding-top: 100px;
+.about_aboutMe{
+    list-style: none;
+}
+
+.about_aboutWork{
+    list-style: none;
+    justify-content: center;
+    margin: auto;
+    display: block;
+}
+
+.about_polaroid{
+    justify-content: center;
+    aspect-ratio: 2/3;
+    height: 75vh;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.about_polaroid1{
+    justify-content: center;
+    margin: auto;
+    height: 50vh;
+    width: 20%;
+    background: white;
+}
+.about_workPlaces{
+    aspect-ratio: 1/1;
+    height: 30vh;
+}
+.about_polaroidText{
+    text-align: center;
+}
+
+.about_workNames{
+    text-align: center;
+    font-size: 2.75vh;
+}
+
+@media (pointer:none), (pointer:coarse)  {
+    #about_me0{
+        width: 70vw;
+        height: 50vh;
+        aspect-ratio: 1/2;
     }
     
-    #about img{
-        height: 240px;
-        width: 180px;
-        border-radius: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        
+    #about_grad{
+        width: 70vw;
+        height: 50vh;
+        aspect-ratio: 1/2;
+    }
+    #about_city{
+        width: 70vw;
+        height: 50vh;
+        aspect-ratio: 1/2;
     }
     
-    #about div ul li div img{
-        height: 240px;
-        width: 180px;
-        border-radius: 20px;
-        border-style: solid;
-        border-width: 2px;
-        margin-bottom: 10px;
-    }
-    
-    #about div ul li{
+    #about_Item{
         list-style-type: none;
         width: 100%;
         justify-content: center;
@@ -95,36 +127,41 @@
         margin-bottom: 30px;
         
     }
-    #about div ul li p{
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    
-    #about div ul li div{
-        display: inline-block;
-        list-style-type: none;
-        background-color: white;
-        height: 400px;
-        width: 200px;
-        padding-top: 20px;
-        justify-content: center;
-        margin: auto;
-        margin-bottom: 20px;
-        border-radius: 20px;
-    }
-    
-    #about div ul li div p{
-        font-size: 1.5rem;
-        text-align: center;
-        margin: auto;
-    }
     
     .about_generalFont{
-        font: italic calc(2vw + 0.5rem) "Fira Sans", serif;
+        font: italic calc(2vw + 0.5em) "Fira Sans", serif;
         color: white;
         text-align: center;
-        padding-right: 20px;
-        padding-left: 20px;
     }
     
+    .about_aboutMe{
+        list-style: none;
+    }
+    
+    .about_aboutWork{
+        list-style: none;
+        justify-content: center;
+        margin: auto;
+        display: block;
+    }
+    .about_polaroid{
+        height: 60vh;
+        border-radius: 20px;
+
+    }
+    .about_polaroid1{
+        justify-content: center;
+        margin: auto;
+        height: 50vh;
+        width:50%;
+        background: white;
+    }
+    .about_workPlaces{
+        aspect-ratio: 1/1;
+        height: 30vh;
+    }
+    .about_workNames{
+        text-align: center;
+        font-size: 5vw;
+    }
 }
