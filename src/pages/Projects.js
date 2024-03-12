@@ -10,9 +10,13 @@ import Comments from "../Comments";
 import RadarDish from '../assets/pictures/projects/RadarDish/RadarDish1.png';
 import RadarDish2 from '../assets/pictures/projects/RadarDish/RadarDish.png';
 import RadarDish3 from '../assets/pictures/projects/RadarDish/DishBuilt.jpg';
+
 import RobotLeg from "../assets/pictures/projects/RoboticLeg/RobotLeg.png";
+import RobotLegPic from "../assets/pictures/projects/RoboticLeg/RoboticLegCREO.png";
+
 import pipBoy0 from "../assets/pictures/projects/Pipboy/PipBoy.png";
 import pipBoy1 from "../assets/pictures/projects/Pipboy/PipBoy2.png";
+
 import PCB0 from "../assets/pictures/projects/RoboticsClub/PCB,RevC.jpg";
 import PCB1 from "../assets/pictures/projects/RoboticsClub/PCB,RevC2.jpg";
 
@@ -20,7 +24,7 @@ import PCB1 from "../assets/pictures/projects/RoboticsClub/PCB,RevC2.jpg";
 export default function Projects(){
     
     const Images = [ [RadarDish, "Radar dish", "3D printed radar dish with automated testing with embedded systems and Python"],
-        [RobotLeg, "Robotic leg", "Robotic leg made with embedded systems and 3D printed"],
+        [RobotLegPic, "Robotic leg", "Robotic leg made with embedded systems and 3D printed"],
         [pipBoy0, "Pipboy 3000", "Pipboy 3000 made with CREO Parametrics CAD"],
         [PCB0, "Robotics club PCB", "Motor PCB made with DipTrace from schematic to PCB to population"] 
     ];
@@ -77,6 +81,10 @@ export default function Projects(){
                             <iframe className="projects_Video" src="https://player.vimeo.com/video/921328085?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="RobotLeg demo"></iframe>                            
                             <p className="projects_projectName">My robotic leg</p>
                         </div>         
+                        <div className="projects_projectDiv">
+                            <img className="projects_projectImage" src={RobotLegPic}/>
+                            <p className="projects_projectName">Assembled Robotic leg in CREO</p>
+                        </div>   
                         <p className="projects_generalFont">
                             Individual robotic leg project where I designed a leg like structure and used a microcontroller to move the 
                             leg up and down with a linear actuator. This used CREO parametrics to design the leg and a 3D printer to build 
