@@ -4,9 +4,13 @@
     overflow: hidden;
     height: auto;
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 125px;
     margin: auto;
     justify-content: center;
+}
+
+#projects_carousel{
+    min-height: 85vh;
 }
 
 .projects_Video{
@@ -77,7 +81,7 @@
 }
 
 .projects_generalFont{
-    font: italic 5vh "Fira Sans", serif;
+    font: italic 4.5vh "Fira Sans", serif;
     color: white;
     text-align: center;
     width: 100%;
@@ -87,6 +91,9 @@
 }
 
 @media (pointer:none), (pointer:coarse) {
+    #projects{
+        padding-top: 75px;
+    }
     .projects_generalFont{
         font: italic 5vw "Fira Sans", serif;
     }

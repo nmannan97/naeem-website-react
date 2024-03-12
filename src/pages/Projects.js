@@ -1,4 +1,6 @@
 import {React, useState} from "react";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
 
 import './Projects.css'
 
@@ -17,14 +19,31 @@ import PCB1 from "../assets/pictures/projects/RoboticsClub/PCB,RevC2.jpg";
 
 export default function Projects(){
     
+    const Images = [ [RadarDish, "Radar dish", "3D printed radar dish with automated testing with embedded systems and Python"],
+        [RobotLeg, "Robotic leg", "Robotic leg made with embedded systems and 3D printed"],
+        [pipBoy0, "Pipboy 3000", "Pipboy 3000 made with CREO Parametrics CAD"],
+        [PCB0, "Robotics club PCB", "Motor PCB made with DipTrace from schematic to PCB to population"] 
+    ];
 
     return(
         <>  
             <Navbar />
             <div id="projects">
-                <p className="projects_generalFont"> Welcome to my projects page!</p>
-                <p className="projects_generalFont"> Here are some of my projects...</p>
-
+                <div id="projects_carousel">
+                    <p className="projects_generalFont"> Welcome to my projects page!</p>
+                    <p className="projects_generalFont"> Here are some of my projects...</p>
+                    <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
+                        {Images.map((photos, index) => (
+                            <div className="about_polaroid1" key={index}>
+                                <img className="about_workPlaces" src={photos[0]} alt={`Image ${index}`} />
+                                <p className="about_workNames"> {photos[1]} </p>
+                                <p className="about_workNameJob"> {photos[2]} </p>
+                            </div>
+                        ))}
+                    </Carousel>
+                    <p className="projects_generalFont">Scroll down for more ↧</p>
+                </div>
+                
                 <ol id="projects_ProjectsList">
                     <li className="projects_ProjectItem">
                         <p className="projects_generalFont">Radar dish ~</p>
@@ -85,9 +104,13 @@ export default function Projects(){
                     </li>
                 </ol>
 
-
             </div>
 
         </>
     )
 }
+
+/**
+ * 
+ * 
+ */
