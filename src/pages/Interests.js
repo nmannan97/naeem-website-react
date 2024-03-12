@@ -18,17 +18,17 @@ export default function About(){
         <div id="interests">
             <p className="interests_generalFont">Welcome to my interests page!</p>
             <p className="interests_generalFont"> Mini Cat Town ~</p>
-            <ul>
-                <li>
-                    <div>
-                        <img src={Award} />
-                        <p > me and my mini cat town award</p>
+            <ul id="interests_mct">
+                <li className="interests_mctPic">
+                    <div className="interests_polaroid">
+                        <img className="interests_MCT" src={Award} />
+                        <p className="interests_generalFont2"> me and my mini cat town award</p>
                     </div>
                 </li>
-                <li>
-                    <div>
-                        <img src={Cat} />
-                        <p > me and my mini cat friend</p>
+                <li className="interests_mctPic">
+                    <div className="interests_polaroid">
+                        <img className="interests_MCT" src={Cat} />
+                        <p className="interests_generalFont2"> me and my mini cat friend</p>
                     </div>
                 </li>
             </ul>
@@ -37,23 +37,23 @@ export default function About(){
                 can play and volunteer with kittens in San Jose!
             </p>
             <p className="interests_generalFont"> Board games I like ~</p>
-            <ul>
-                <li>
-                    <div>
-                        <img src={Concordia} />
-                        <p > Concordia</p>
+            <ul id="interests_boardgames">
+                <li className="interests_boardgamesItem">
+                    <div className="interests_polaroid">
+                        <img className="interests_boardgame" src={Concordia} />
+                        <p className="interests_generalFont2"> Concordia</p>
                     </div>
                 </li>
-                <li>
-                    <div>
-                        <img src={Coup} />
-                        <p > Coup</p>
+                <li className="interests_boardgamesItem">
+                    <div className="interests_polaroid">
+                        <img className="interests_boardgame" src={Coup} />
+                        <p className="interests_generalFont2"> Coup</p>
                     </div>
                 </li>
-                <li>
-                    <div>
-                        <img src={LordsOfVegas} />
-                        <p > Lords of Vegas</p>
+                <li className="interests_boardgamesItem">
+                    <div className="interests_polaroid">
+                        <img className="interests_boardgame" src={LordsOfVegas} />
+                        <p className="interests_generalFont2"> Lords of Vegas</p>
                     </div>
                 </li>
             </ul>
