@@ -96,7 +96,7 @@ a {
     height: 50px;
     aspect-ratio: 1/1;
     margin-top: 12px;
-    margin-left: 20px;
+    margin-left: 12px;
   }
   
   a {
@@ -176,7 +176,7 @@ a {
     */
     width: 100vw;
   }
-  .navbar .navbar_hamburgerlines{
+  .navbar_hamburgerlines{
     display: flex;
     height: 23px;
     width: 35px;
@@ -240,7 +240,7 @@ a {
   }
 
   .navbar input[type="checkbox"]:checked ~ .navbar_menu_items {
-    transform: translateX(-25%);
+    transform: translateX(-40%);
   }
 
   /* When a user hovers, focuses or if the link is active change the background */

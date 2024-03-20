@@ -111,6 +111,11 @@
 }
 
 @media (pointer:none), (pointer:coarse)  {
+    #about{
+        padding-top: 75px;
+        padding-bottom: 20px;
+    }
+
     #about_me0{
         width: 70vw;
         height: 50vh;
