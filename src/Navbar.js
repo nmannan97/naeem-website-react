@@ -1,6 +1,8 @@
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 
+import insignia from "./assets/pictures/Insignia3(large).jpg"
+
 function Navbar(){
 
     
@@ -15,6 +17,7 @@ function Navbar(){
                 </div>
 
                 <Link className='navbar_profile_link'  to='/'>
+                    <img id="navbar_logo" src={insignia}/>
                     <p className='navbar_font'> Naeem Mannan </p>
                 </Link>
             </div>

@@ -1,3 +1,10 @@
+#navbar_logo{
+  height: 110px;
+  aspect-ratio: 1/1;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 50%;
+}
 
 a {
     text-decoration: none;
