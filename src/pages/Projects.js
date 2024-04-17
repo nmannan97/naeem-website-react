@@ -69,10 +69,11 @@ export default function Projects(){
                             <p className="projects_projectName">Assembled dish</p>
                         </div>   
                         <p className="projects_generalFont">
-                            Duo project where I designed and built a radar dish, while my partner did the simulations for the project in HFSS. 
+                            2 man project where I designed a radar in solidworks, built a radar dish prototype, and automated the dish testing,
+                            while my partner did the simulations for the project in HFSS. 
                             Along with this I designed a system that would take sample points every 1 degree and then put the average of 5 
-                            samples into an excel file. This used a Python script to collect data and an Arduino using RTOS to take accurate 
-                            and communicate via serial communications. Hover over the picture to view the gif. This is a SDR.
+                            samples across various wifi channels into an excel file. This used a Python script to collect data and an Arduino 
+                            using RTOS to take accurate and communicate via serial communications. This was an SDR.
                         </p>           
                     </li>
                     <li className="projects_ProjectItem">
@@ -86,10 +87,10 @@ export default function Projects(){
                             <p className="projects_projectName">Assembled Robotic leg in CREO</p>
                         </div>   
                         <p className="projects_generalFont">
-                            Individual robotic leg project where I designed a leg like structure and used a microcontroller to move the 
-                            leg up and down with a linear actuator. This used CREO parametrics to design the leg and a 3D printer to build 
+                            Individual robotic leg project where I designed a leg like structure in CREO parametrics and used a microcontroller to move the 
+                            leg up and down with a linear actuator and potentiometer sensing. This used CREO parametrics to design the leg and a 3D printer to build 
                             the parts in PLA and rubber. Looking to do more with it and include servo motors to move the leg when I get 
-                            more funds. Hover over the picture to view the gif.
+                            more funds.
                         </p>              
                     </li>
                     <li className="projects_ProjectItem">
