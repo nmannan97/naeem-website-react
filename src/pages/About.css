@@ -30,8 +30,9 @@
     padding-top: 15px;
 
     color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #about_linkedin{
@@ -96,6 +97,7 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 50px;
 }
 /* Classnames */
 .about_Item{

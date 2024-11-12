@@ -32,7 +32,7 @@ function Navbar(){
                 <li className='navbar_links'>
                     <Link to='/interests'><p className='navbar_font2'>interests</p></Link>
                 </li>
-                <li id='navbar_links_linkedin' >
+                <li className='navbar_links' id='navbar_links_linkedin' >
                     <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'><p className='navbar_font2'>Linkedin</p></a>
                 </li>
             </ul>

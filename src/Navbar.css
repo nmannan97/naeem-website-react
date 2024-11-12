@@ -12,6 +12,11 @@ background: #404040;
 
 }
 
+#navbar_linkedin{
+  text-decoration: none;
+  color: #e7e7e7;
+}
+
 .navbar {
 /* Rectangle 1 */
   overflow: hidden;
@@ -33,10 +38,6 @@ background: #404040;
     display: none;
   }
   /* We want all links in the navbar to be #e7e7e7 */
-  .navbar a {
-    color: #e7e7e7;
-    
-  }
   
 
   
@@ -54,8 +55,8 @@ background: #404040;
 .navbar_menu_items{
     /* Let's reset the margin and padding of the list so it's is flush. */
      width: 100vw;
-     height: auto;  
-     margin: auto;
+     height: 100%;  
+     margin: 0 0 auto auto;
      padding-left: 50px;
      /* Let's remove the bullet points */
      list-style-type: none;
@@ -65,16 +66,17 @@ background: #404040;
 }
 .navbar_links{
 /* Home button */
-  margin-top: 50px;
-  margin-right: 1px;
+  height: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
   background: black;
   border-radius: 50px;
 }
 
 #navbar_links_linkedin{
   /* Home button */
-  margin-top: 50px;
-  margin-right: 75px;
+  margin-right: 100px;
   background: #B80F0A;
   border-radius: 50px;
 }
@@ -101,7 +103,6 @@ background: #404040;
 }
 .navbar_font2{
   color: white;
-  height: auto;
   margin: auto;
 }
   .navbar .navbar_container{
