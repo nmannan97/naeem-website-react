@@ -20,20 +20,20 @@ function Navbar(){
                     <img id="navbar_logo" src={insignia}/>
                     <p className='navbar_font'> Naeem Mannan </p>
                 </Link>
+                <input type='checkbox'/>
             </div>
-            <input type='checkbox'/>
             <ul className='navbar_menu_items'>
-                <li>
-                    <Link to='/'>About</Link>
+                <li className='navbar_links'>
+                    <Link to='/'><p className='navbar_font2'>About</p></Link>
                 </li>
-                <li>
-                    <Link to='/projects'>Projects</Link>
+                <li className='navbar_links'>
+                    <Link to='/projects'><p className='navbar_font2'>Projects</p></Link>
                 </li>
-                <li>
-                    <Link to='/interests'>interests</Link>
+                <li className='navbar_links'>
+                    <Link to='/interests'><p className='navbar_font2'>interests</p></Link>
                 </li>
-                <li>
-                    <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'>Linkedin</a>
+                <li id='navbar_links_linkedin' >
+                    <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'><p className='navbar_font2'>Linkedin</p></a>
                 </li>
             </ul>
         </nav> 

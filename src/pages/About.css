@@ -1,69 +1,128 @@
 #about{
-    background: url('../assets/pictures/Backgroundmain.jpg');
-    background-size: cover;
-    overflow: hidden;
-    height: auto;
-    min-height: 100vh;
     padding-top: 150px;
-    padding-bottom: 20px;
+    background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
+    background-blend-mode: screen;
+    overflow: hidden;
+}
+
+#about_intro{
+    /* Rectangle 7 */
+
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    background: #D3D3D3;
+    border-radius: 30px;
+}
+
+#about_introWelcome{
+    text-align: center;
+    /* Hello and welcome to my webpage! Click below for my Linkedin */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 61px;
+    padding-top: 15px;
+
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#about_linkedin{
+    /* Home button */
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    max-height: 20vh;
+    width: 20vw;
+    background: #B80F0A;
+    border-radius: 50px;
+}
+
+#about_font2{
+    color: white;
+    text-align: center;
+    font-size: 2.5vw;
 }
 
 #about_me0{
     height: 640px;
     width: 480px;
     border-radius: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: auto;
     display: flex;
     justify-content: center;
-    margin: auto;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
 }
 
 #about_grad{
-    height: 60vh;
-    aspect-ratio: 2/3;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 10px;
+    height: 400px;
+    aspect-ratio: 4/5;
+    padding-top: 10px;
     display: block;
     justify-content: center;
     margin: auto;
 }
 
 #about_city{
-    height: 60vh;
-    aspect-ratio: 2/3;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 10px;
+    height: 400px;
+    aspect-ratio: 4/5;
+    padding-top: 10px;
     display: block;
     justify-content: center;
     margin: auto;
 }
 
-#about_Item{
-    list-style-type: none;
-    width: 100%;
+#about_me{
+    margin: auto;
     justify-content: center;
+    width: auto;
+}
+
+/* Classnames */
+.about_Item{
+    list-style-type: none;
     margin-top: 30px;
     margin-bottom: 30px;
     
 }
 
+.about_background{
+    width: auto;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    background: #D3D3D3;
+    border-radius: 30px;
+}
+
 .about_generalFont{
-    font: italic 5vh "Fira Sans", serif;
-    color: white;
+    font: italic 40px "Fira Sans", serif;
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .about_aboutMe{
     list-style: none;
+    columns: 2;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
 }
 
 .about_aboutWork{
@@ -71,30 +130,32 @@
     justify-content: center;
     margin: auto;
     display: block;
+    padding-bottom: 25px;
 }
 
 .about_polaroid{
     justify-content: center;
-    aspect-ratio: 2/3;
-    height: 75vh;
-    background-color: white;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    border-radius: 50px;
+    aspect-ratio: 4/5;
+    width: 400px;
+    height: 500px;
+    left: 220px;
+    background: #FFFFFF;
+    border-radius: 25px;
 }
 
 .about_polaroid1{
     justify-content: center;
+    aspect-ratio: 4/5;
+    height: 400px;
+    left: 220px;
+    background: #FFFFFF;
+    border-radius: 25px;
     margin: auto;
-    height: 50vh;
-    width: 20%;
-    background: white;
     
 }
 .about_workPlaces{
     aspect-ratio: 1/1;
-    height: 30vh;
+    border-radius: 25px;
 }
 .about_polaroidText{
     text-align: center;
@@ -102,12 +163,12 @@
 
 .about_workNames{
     text-align: center;
-    font-size: 2.75vh;
+    font-size: 15px;
 }
 
 .about_workNameJob{
     text-align: center;
-    font-size: 1.5vh;
+    font-size: 10px;
 }
 
 @media (pointer:none), (pointer:coarse)  {
