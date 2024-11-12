@@ -35,9 +35,9 @@ export default function About(){
                         Hello and welcome to my webpage!
                         <br/>Click below for my Linkedin
                     </p>
-                    <div id='about_linkedin' >
-                        <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'><p id='about_font2'>Linkedin</p></a>
-                    </div>
+                </div>
+                <div id='about_linkedin' >
+                    <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'><p id='about_font2'>Linkedin</p></a>
                 </div>
                 <img id="about_me0" src={Me0} />
                 <div className="about_background">

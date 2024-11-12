@@ -2,7 +2,7 @@
     padding-top: 150px;
     background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
     background-blend-mode: screen;
-    overflow: hidden;
+    overflow: none;
 }
 
 #about_intro{
@@ -10,7 +10,7 @@
 
     width: auto;
     margin-top: 10px;
-    margin-bottom: 10%;
+    margin-bottom: 10px;
     margin-right: 10%;
     margin-left: 10%;
 
@@ -45,6 +45,10 @@
     border-radius: 50px;
 }
 
+#about_linkedin a{
+    text-decoration: none;
+}
+
 #about_font2{
     color: white;
     text-align: center;
@@ -55,11 +59,13 @@
     height: 640px;
     width: 480px;
     border-radius: 100%;
-    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    border: solid black;
 }
 
 #about_grad{
@@ -86,17 +92,21 @@
     width: auto;
 }
 
+#about_container{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
 /* Classnames */
 .about_Item{
-    list-style-type: none;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
+    margin: auto;
+    padding: none;
 }
 
 .about_background{
     width: auto;
     height: auto;
+    justify-content: center;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
@@ -119,10 +129,10 @@
 
 .about_aboutMe{
     list-style: none;
-    columns: 2;
-    justify-content: space-evenly;
     display: flex;
     width: 100%;
+    justify-content: center;
+    padding: 0px;
 }
 
 .about_aboutWork{
@@ -172,75 +182,5 @@
 }
 
 @media (pointer:none), (pointer:coarse)  {
-    #about{
-        padding-top: 75px;
-        padding-bottom: 20px;
-    }
-
-    #about_me0{
-        width: 70vw;
-        height: 50vh;
-        aspect-ratio: 1/2;
-    }
     
-    #about_grad{
-        width: 70vw;
-        height: 50vh;
-        aspect-ratio: 1/2;
-    }
-    #about_city{
-        width: 70vw;
-        height: 50vh;
-        aspect-ratio: 1/2;
-    }
-    
-    #about_Item{
-        list-style-type: none;
-        width: 100%;
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        
-    }
-    
-    .about_generalFont{
-        font: italic 3vh "Fira Sans", serif;
-        color: white;
-        text-align: center;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .about_aboutMe{
-        list-style: none;
-    }
-    
-    .about_aboutWork{
-        list-style: none;
-        justify-content: center;
-        margin: auto;
-        display: block;
-    }
-    .about_polaroid{
-        height: 60vh;
-        border-radius: 20px;
-
-    }
-    .about_polaroid1{
-        justify-content: center;
-        margin: auto;
-        height: 50vh;
-        width:50%;
-        background: white;
-    }
-    .about_workPlaces{
-        aspect-ratio: 1/1;
-        height: 30vh;
-    }
-    .about_workNames{
-        font-size: 5vw;
-    }
-    .about_workNameJob{
-        font-size: 3.5vw;
-    }
 }
