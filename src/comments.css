@@ -1,0 +1,14 @@
+#comments{
+
+}
+
+#comments_section {
+    list-style: none;
+}
+
+#comments_container_sub{
+    background-color: beige;
+    height: auto;
+    width: auto;
+    margin: 10px;
+}

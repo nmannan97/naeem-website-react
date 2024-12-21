@@ -1,104 +1,139 @@
 #interests{
-    background: url("../assets/pictures/Backgroundmain.jpeg");
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 150px;
-
-}
-#interests ul{
-    display: inline-flex;
-    justify-content: center;
+    background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
+    background-blend-mode: screen;
+    overflow: hidden;
 }
 
-#interests ul li{
+#interests_mct{
+    justify-content: space-evenly;
+    columns: 2;
+    list-style: none;
+}
+
+#interests_boardgames{
+    display: flex;
+    columns: 3;
+    width: 100%;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.interests_mctPic{
     justify-content: center;
     list-style-type: none;
 }
 
-#interests ul li div{
+
+.interests_polaroid{
     justify-content: center;
+    display: block;
+    margin: auto;
     background-color: white;
-    width: 540px;
-    height: 760px;
+    aspect-ratio: 1/2;
+    height: 60vh;
     list-style-type: none;
-    padding-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
 }
 
-#interests ul li div p{
-    font-size: 2rem;
-
+.interests_boardgameItem{
+    width: 33%;
 }
 
-#interests ul li img{
-    height: 640px;
-    width: 480px;
+.interests_boardgame{
+    aspect-ratio: 1/1;
+    height: 40vh;
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
     margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.interests_MCT{
+    aspect-ratio: 1/1;
+    height: 40vh;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin: auto;
 }
 
 .interests_generalFont{
-    font: italic calc(2vw + 0.5em) "Fira Sans", serif;
+    font: italic 4vh "Fira Sans", serif;
     color: white;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
 }
 
-@media (max-width: 900px) {
+.interests_generalFont2{
+    font: italic 3vh "Fira Sans", serif;
+    text-align: center;
+}
+
+@media (pointer:none), (pointer:coarse) {
+
     #interests{
-        background: url("../assets/pictures/Backgroundmain.jpeg");
+        background: url("../assets/pictures/Backgroundmain.jpg");
         min-height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top: 150px;
-    
+        padding-top: 75px;
+        overflow: hidden;
     }
-    #interests ul{
-        display: inline-block;
+
+    #interests_mct{
+        display: inline;
+        columns: 1;
+        width: 100%;
+    }
+    
+    
+    #interests_boardgames{
+        columns: 1;
+        display: block;
+        margin: auto;
         justify-content: center;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
-    #interests ul li{
+    .interests_mctPic{
         justify-content: center;
         list-style-type: none;
     }
     
-    #interests ul li div{
-        justify-content: center;
-        background-color: white;
-        height: 400px;
-        width: 200px;
-        list-style-type: none;
-        padding-top: 20px;
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-bottom: 30px;
+    
+    .interests_polaroid{
+        padding-bottom: 2vh;
     }
     
-    #interests ul li div p{
-        font-size: 1.5rem;
-        padding-bottom: 30px;;
     
+    .interests_boardgame{
+        margin: auto;
     }
     
-    #interests ul li img{
-        height: 240px;
-        width: 180px;
+    .interests_MCT{
+        aspect-ratio: 1/1;
+        height: 40vh;
         border-radius: 20px;
         border-style: solid;
         border-width: 2px;
         margin-bottom: 10px;
+        justify-content: center;
+        margin: auto;
     }
     
     .interests_generalFont{
-        font: italic calc(2vw + 0.5em) "Fira Sans", serif;
+        font: italic 3vh "Fira Sans", serif;
         color: white;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 2vw;
+        margin-right: 2vw;
     }
     
 }

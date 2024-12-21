@@ -1,0 +1,35 @@
+#contacts{
+    min-height: 100vh;
+    padding-top: 150px;
+    background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
+    background-blend-mode: screen;
+    overflow: hidden;
+}
+
+#contacts_linkedin{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+}
+
+#contacts_linkedinLink{
+    display: flex;
+    text-decoration: none;
+    width: 40%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-color: rgb(255,0,0, 0.85);
+    border-radius: 5px;
+    color: white;
+}
+
+.contacts_bubble{
+    margin: auto;
+    justify-content: center;
+    background: rgba(53,56,57,0.65);
+    width: 60%;
+    border-radius: 17px;
+}

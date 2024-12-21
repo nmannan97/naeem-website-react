@@ -1,39 +1,45 @@
+#navbar_logo{
+  border-radius: 100%;
+  /* Ellipse 1 */
 
-a {
-    text-decoration: none;
-    font-size: 2.33em;
-  }
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 10px;
+  top: 25px;
 
-  .navbar {
-    background-color: #333333;
-    display: flex;
-    /* let's align the items so everything is nice and centered */
-    position: fixed;
-    justify-content: space-between;
-    height: 150px;
-    width: 100vw;
-    z-index: 1;
-  }
-  
-  .navbar input{
+background: #404040;
+
+}
+
+#navbar_linkedin{
+  text-decoration: none;
+  color: #e7e7e7;
+}
+
+.navbar {
+/* Rectangle 1 */
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  left: 0px;
+  top: 0px;
+  justify-content: space-between;
+  background: #DCDCDC;
+
+}
+.navbar input{
+    position: absolute;
+    top: 15%;
+    left: 0.75%;
+    height: 100px;
+    width: 100px;
     display: none;
   }
   /* We want all links in the navbar to be #e7e7e7 */
-  .navbar a {
-    color: #e7e7e7;
-    
-  }
   
-  .navbar ul {
-   /* Let's reset the margin and padding of the list so it's is flush. */
-    margin: 10px ;
-    padding: 10px;
-    /* Let's remove the bullet points */
-    list-style-type: none;
-    /* display the list flex and align the items centered */
-    display: flex;
-    justify-content: right;
-  }
+
   
   .navbar .brand {
     /*Let's make the anchor display block.
@@ -46,15 +52,59 @@ a {
    float: left;
    padding-left: 1vw;
   }
-  
-  .navbar .navbar_font{
-    font: italic 1.5em "Fira Sans", serif;
-    color: white;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.navbar_menu_items{
+    /* Let's reset the margin and padding of the list so it's is flush. */
+     width: 100vw;
+     height: 100%;  
+     margin: 0 0 auto auto;
+     padding-left: 50px;
+     /* Let's remove the bullet points */
+     list-style-type: none;
+     /* display the list flex and align the items centered */
+     display: flex;
+     justify-content: right;
+}
+.navbar_links{
+/* Home button */
+  height: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+  background: black;
+  border-radius: 50px;
+}
 
+#navbar_links_linkedin{
+  /* Home button */
+  margin-right: 75px;
+  background: #B80F0A;
+  border-radius: 50px;
+}
+
+.navbar_font{
+  /* Naeem Mannan */
+
+  position: absolute;
+  width: 239px;
+  height: 62px;
+  left: 120px;
+  top: 44px;
+
+  font: italic 1.5em "Fira Sans", serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: black;
+  margin: auto;
+}
+.navbar_font2{
+  color: white;
+  margin: auto;
+}
   .navbar .navbar_container{
     display: flex;
     
@@ -67,7 +117,7 @@ a {
   }
 
   .navbar ul li a {
-    color: #e7e7e7;
+    color: black;
     padding: 24px;
     margin: auto;
     /*Let's make the anchor display block.
@@ -85,6 +135,13 @@ a {
   }
 
 @media (max-width: 900px){
+  #navbar_logo{
+    height: 50px;
+    aspect-ratio: 1/1;
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  
   a {
     text-decoration: none;
     font-size: 2.33em;
@@ -95,7 +152,7 @@ a {
     display: flex;
     /* let's align the items so everything is nice and centered */
     position: fixed;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 75px;
     width: 100vw;
     z-index: 1;
@@ -106,7 +163,7 @@ a {
   }
   /* We want all links in the navbar to be #e7e7e7 */
   .navbar a {
-    color: #e7e7e7;
+    color: black;
     
   }
   
@@ -134,9 +191,9 @@ a {
    padding-left: 1vw;
   }
   
-  .navbar .navbar_font{
+.navbar_font{
     font: italic 0.5em "Fira Sans", serif;
-    color: white;
+    color: black;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -162,7 +219,7 @@ a {
     */
     width: 100vw;
   }
-  .navbar .navbar_hamburgerlines{
+  .navbar_hamburgerlines{
     display: flex;
     height: 23px;
     width: 35px;
@@ -196,19 +253,12 @@ a {
     transition: transform 0.4s ease-in-out;
   }
 
-  .navbar .navbar_menu_items{
-    margin-top: 75px;
-    background: #fff;
-    height: 400px;
-    width: 200vw;
-    transform: translate(150%);
-    display: flex;
-    flex-direction: column;
-    margin-right: -40px;
-    padding-right: 50px;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: 5px 0px 10px 0px #aaa;
-  }
+.navbar_menu_items{
+  /* Home button */
+  position: absolute;
+  width: 100vw;
+  height: 100%;  
+}
 
   .navbar input[type="checkbox"] {
     position: absolute;
@@ -226,7 +276,7 @@ a {
   }
 
   .navbar input[type="checkbox"]:checked ~ .navbar_menu_items {
-    transform: translateX(-25%);
+    transform: translateX(-40%);
   }
 
   /* When a user hovers, focuses or if the link is active change the background */

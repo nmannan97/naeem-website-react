@@ -1,130 +1,188 @@
 #about{
-    background: url('../assets/pictures/Backgroundmain.jpeg');
-    background-size: cover;
-    overflow: hidden;
-    height: auto;
-    min-height: 100vh;
     padding-top: 150px;
+    background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
+    background-blend-mode: screen;
+    overflow: hidden;
 }
 
-#about img{
-    height: 640px;
-    width: 480px;
-    border-radius: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+#about_intro{
+    /* Rectangle 7 */
 
-#about div ul li div img{
-    height: 640px;
-    width: 480px;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 2px;
+    width: auto;
+    margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    background: #D3D3D3;
+    border-radius: 30px;
 }
 
-#about div ul li{
-    list-style-type: none;
-    width: 100%;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
-}
-#about div ul li p{
+#about_introWelcome{
+    text-align: center;
+    /* Hello and welcome to my webpage! Click below for my Linkedin */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 61px;
+    padding-top: 15px;
+
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-#about div ul li div{
-    display: inline-block;
-    list-style-type: none;
-    background-color: white;
-    height: 790px;
-    width: 540px;
-    padding-top: 20px;
-    justify-content: center;
+#about_linkedin{
+    /* Home button */
     margin: auto;
- 
+    justify-content: center;
+    display: flex;
+    max-height: 20vh;
+    width: 20vw;
+    background: #B80F0A;
+    border-radius: 50px;
 }
 
-#about div ul li div p{
-    font-size: 2rem;
+#about_linkedin a{
+    text-decoration: none;
+}
+
+#about_font2{
+    color: white;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+#about_me0{
+    height: 640px;
+    width: 480px;
+    border-radius: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    border: solid black;
+}
+
+#about_grad{
+    height: 400px;
+    aspect-ratio: 4/5;
+    padding-top: 10px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+}
+
+#about_city{
+    height: 400px;
+    aspect-ratio: 4/5;
+    padding-top: 10px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+}
+
+#about_me{
+    margin: auto;
+    justify-content: center;
+    width: auto;
+}
+
+#about_container{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+/* Classnames */
+.about_Item{
+    margin: auto;
+    padding: none;
+}
+
+.about_background{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    background: #D3D3D3;
+    border-radius: 30px;
 }
 
 .about_generalFont{
-    font: italic calc(2vw + 0.5em) "Fira Sans", serif;
-    color: white;
+    font: italic 40px "Fira Sans", serif;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about_aboutMe{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0px;
+}
+
+.about_aboutWork{
+    list-style: none;
+    justify-content: center;
+    margin: auto;
+    display: block;
+    padding-bottom: 25px;
+}
+
+.about_polaroid{
+    justify-content: center;
+    aspect-ratio: 4/5;
+    width: 400px;
+    height: 500px;
+    left: 220px;
+    background: #FFFFFF;
+    border-radius: 25px;
+}
+
+.about_polaroid1{
+    justify-content: center;
+    aspect-ratio: 4/5;
+    height: 400px;
+    left: 220px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    margin: auto;
+    
+}
+.about_workPlaces{
+    aspect-ratio: 1/1;
+    border-radius: 25px;
+}
+.about_polaroidText{
     text-align: center;
 }
 
-@media (max-width: 900px) {
-    #about{
-        background: url('../assets/pictures/Backgroundmain.jpeg');
-        background-size: cover;
-        overflow: hidden;
-        height: auto;
-        min-height: 100vh;
-        padding-top: 100px;
-    }
-    
-    #about img{
-        height: 240px;
-        width: 180px;
-        border-radius: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        
-    }
-    
-    #about div ul li div img{
-        height: 240px;
-        width: 180px;
-        border-radius: 20px;
-        border-style: solid;
-        border-width: 2px;
-        margin-bottom: 10px;
-    }
-    
-    #about div ul li{
-        list-style-type: none;
-        width: 100%;
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        
-    }
-    #about div ul li p{
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    
-    #about div ul li div{
-        display: inline-block;
-        list-style-type: none;
-        background-color: white;
-        height: 400px;
-        width: 200px;
-        padding-top: 20px;
-        justify-content: center;
-        margin: auto;
-        margin-bottom: 20px;
-        border-radius: 20px;
-    }
-    
-    #about div ul li div p{
-        font-size: 1.5rem;
-        text-align: center;
-        margin: auto;
-    }
-    
-    .about_generalFont{
-        font: italic calc(2vw + 0.5rem) "Fira Sans", serif;
-        color: white;
-        text-align: center;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
+.about_workNames{
+    text-align: center;
+    font-size: 15px;
+}
+
+.about_workNameJob{
+    text-align: center;
+    font-size: 10px;
+}
+
+@media (pointer:none), (pointer:coarse)  {
     
 }
