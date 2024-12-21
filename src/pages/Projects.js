@@ -5,7 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the ca
 import './Projects.css'
 
 import Navbar from "../Navbar";
-import Comments from "../Comments";
+import Footer from "../Footer";
 
 import RadarDish from '../assets/pictures/projects/RadarDish/RadarDish1.png';
 import RadarDish2 from '../assets/pictures/projects/RadarDish/RadarDish.png';
@@ -126,7 +126,7 @@ export default function Projects(){
                 </ol>
 
             </div>
-
+            <Footer/>
         </>
     )
 }

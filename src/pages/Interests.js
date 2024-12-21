@@ -3,6 +3,7 @@ import React from "react";
 import './Interests.css'
 
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 import Award from '../assets/pictures/interests/MiniCatTown/Award.jpg'
 import Cat from '../assets/pictures/interests/MiniCatTown/MeAndCat.jpg'
@@ -63,6 +64,7 @@ export default function About(){
             </p>
 
         </div>
+        <Footer/>
         </>
     )
 }

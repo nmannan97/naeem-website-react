@@ -1,9 +1,7 @@
 #interests{
-    background: url("../assets/pictures/Backgroundmain.jpg");
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 150px;
+    background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
+    background-blend-mode: screen;
     overflow: hidden;
 }
 

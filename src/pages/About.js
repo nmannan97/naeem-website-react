@@ -34,6 +34,7 @@ export default function About(){
                     <p id="about_introWelcome">
                         Hello and welcome to my webpage!
                         <br/>Click below for my Linkedin
+                        <br/>Also my email: nmannan97@gmail.com
                     </p>
                 </div>
                 <div id='about_linkedin' >
