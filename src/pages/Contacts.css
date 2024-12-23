@@ -7,10 +7,8 @@
 }
 
 #contacts_linkedin{
-    text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    color: white;
 }
 
 #contacts_linkedinLink{
@@ -24,6 +22,7 @@
     background-color: rgb(255,0,0, 0.85);
     border-radius: 5px;
     color: white;
+    font-size: 1rem;
 }
 
 .contacts_bubble{
@@ -32,4 +31,28 @@
     background: rgba(53,56,57,0.65);
     width: 60%;
     border-radius: 17px;
+    padding-bottom: 1px;
+}
+
+.contacts_generalFont{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 900px ) or (pointer: coarse){
+    #contacts{
+        padding-top: 100px;
+    }
+
+    #contacts_linkedinLink{
+        width: 80%;
+        font-size: 0.8rem;
+    }
+
+    .contacts_generalFont{
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+    }
 }

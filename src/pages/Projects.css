@@ -88,7 +88,7 @@
 
 @media (pointer:none), (pointer:coarse) {
     #projects{
-        padding-top: 75px;
+        padding-top: 100px;
     }
     .projects_generalFont{
         font: italic 5vw "Fira Sans", serif;

@@ -12,13 +12,13 @@ export default function Contacts(){
             <Navbar />
             <div id="contacts">
                 <div className="contacts_bubble">
-                    <p id="contacts_linkedin">
+                    <p className="contacts_generalFont" id="contacts_linkedin">
                         Press me to go to Naeem's Linkein: <br/>
                         <a id="contacts_linkedinLink" href='https://www.linkedin.com/in/naeem-mannan-073924126/'>Linkedin profile, press here</a>
                     </p>
                 </div>
                 <div className="contacts_bubble">
-                    <p id="contacts_linkedin">
+                    <p className="contacts_generalFont">
                         Email:
                         <br/>
                         nmannan97@gmail.com
