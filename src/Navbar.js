@@ -16,9 +16,9 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar_container">
           <label htmlFor="navbar_checkbox" className="navbar_hamburgerlines">
-            <span className="navbar_hamburgerline line1"></span>
-            <span className="navbar_hamburgerline line2"></span>
-            <span className="navbar_hamburgerline line3"></span>
+            <span className={`navbar_hamburgerline ${isChecked ? "line1_active" : ""}`}></span>
+            <span className={`navbar_hamburgerline ${isChecked ? "line2_active" : ""}`}></span>
+            <span className={`navbar_hamburgerline ${isChecked ? "line3_active" : ""}`}></span>
           </label>
           
           {/* Add onChange handler to the checkbox */}
@@ -35,7 +35,8 @@ function Navbar() {
         </div>
 
         {/* Navbar menu items */}
-        <ul className={`navbar_menu_items ${isChecked ? "open" : ""}`}>
+        <div className={`navbar_menu_items ${isChecked ? "open" : ""}`}>
+        <ul id="navbar_items_list">
           <li className="navbar_links">
             <Link to="/"><p className="navbar_font2">About</p></Link>
           </li>
@@ -49,6 +50,7 @@ function Navbar() {
             <Link to="/contacts"><p className="navbar_font2">Contacts</p></Link>
           </li>
         </ul>
+        </div>
       </nav>
     </>
   );
