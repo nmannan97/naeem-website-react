@@ -1,44 +1,57 @@
-import './Navbar.css'
-import {Link} from 'react-router-dom'
+import './Navbar.css';
+import { Link } from 'react-router-dom';
+import insignia from "./assets/pictures/Insignia3(large).jpg";
+import { useState } from 'react';  // Import useState for handling state
 
-import insignia from "./assets/pictures/Insignia3(large).jpg"
+function Navbar() {
+  const [isChecked, setIsChecked] = useState(false);  // State to track checkbox status
 
-function Navbar(){
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);  // Update state when checkbox is clicked
+    console.log('Checkbox checked:', e.target.checked);  // Log the checkbox state
+  };
 
-    
-    return(
-        <>
-        <nav className="navbar">
-            <div className="navbar_container">
-                <div className="navbar_hamburgerlines"> 
-                    <span className="navbar_hamburgerline line1"></span>
-                    <span className="navbar_hamburgerline line2"></span>
-                    <span className="navbar_hamburgerline line3"></span>
-                </div>
+  return (
+    <>
+      <nav className="navbar">
+        <div className="navbar_container">
+          <label htmlFor="navbar_checkbox" className="navbar_hamburgerlines">
+            <span className="navbar_hamburgerline line1"></span>
+            <span className="navbar_hamburgerline line2"></span>
+            <span className="navbar_hamburgerline line3"></span>
+          </label>
+          
+          {/* Add onChange handler to the checkbox */}
+          <input 
+            id="navbar_checkbox" 
+            type="checkbox" 
+            onChange={handleCheckboxChange} 
+          />
 
-                <Link className='navbar_profile_link'  to='/'>
-                    <img id="navbar_logo" src={insignia}/>
-                    <p className='navbar_font'> Naeem Mannan </p>
-                </Link>
-                <input type='checkbox'/>
-            </div>
-            <ul className='navbar_menu_items'>
-                <li className='navbar_links'>
-                    <Link to='/'><p className='navbar_font2'>About</p></Link>
-                </li>
-                <li className='navbar_links'>
-                    <Link to='/projects'><p className='navbar_font2'>Projects</p></Link>
-                </li>
-                <li className='navbar_links'>
-                    <Link to='/interests'><p className='navbar_font2'>interests</p></Link>
-                </li>
-                <li className='navbar_links' id='navbar_links_linkedin'>
-                    <Link to='/contacts'><p className='navbar_font2'>contacts</p></Link>
-                </li>
-            </ul>
-        </nav> 
-        </>
-    );
+          <Link className="navbar_profile_link" to="/">
+            <img id="navbar_logo" src={insignia} alt="Logo" />
+            <p className="navbar_font" id="navbar_name"> Naeem Mannan </p>
+          </Link>
+        </div>
+
+        {/* Navbar menu items */}
+        <ul className={`navbar_menu_items ${isChecked ? "open" : ""}`}>
+          <li className="navbar_links">
+            <Link to="/"><p className="navbar_font2">About</p></Link>
+          </li>
+          <li className="navbar_links">
+            <Link to="/projects"><p className="navbar_font2">Projects</p></Link>
+          </li>
+          <li className="navbar_links">
+            <Link to="/interests"><p className="navbar_font2">Interests</p></Link>
+          </li>
+          <li className="navbar_links" id="navbar_links_linkedin">
+            <Link to="/contacts"><p className="navbar_font2">Contacts</p></Link>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
 }
 
 export default Navbar;
