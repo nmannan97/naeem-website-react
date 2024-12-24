@@ -6,7 +6,8 @@
 }
 
 #projects_carousel{
-    min-height: 85vh;
+    height: auto;
+    margin-bottom: 10vh;
 }
 
 .projects_Video{
@@ -22,9 +23,9 @@
 }
 
 #projects_ProjectsList{
-    list-style-type: none;
+    display: inline-block;
     margin: auto;
-    justify-content: center;
+    list-style-type: none;
     width: 80%;
 }
 
@@ -41,11 +42,6 @@
 }
 
 #projects_ProjectItem{
-    justify-content: center;
-    display: flex;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;    
     margin-top: 200px;
 }
 
@@ -77,13 +73,21 @@
 }
 
 .projects_generalFont{
-    font: italic 4.5vh "Fira Sans", serif;
+    font: italic 2em "Fira Sans", serif;
     color: white;
     text-align: center;
-    width: 100%;
+    width: 90%;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.projects_background{
+    height: auto;
+    background: rgb(211, 211, 211, 0.6);
+    border-radius: 20px;
 }
 
 @media (pointer:none), (pointer:coarse) {
