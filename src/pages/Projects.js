@@ -1,12 +1,13 @@
 import {React, useState} from "react";
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
 
 import './Projects.css'
 
 import Navbar from "../Navbar";
-
 import Footer from "../Footer";
+import Pong from "./Pong/Pong"
 
 import RadarDish from '../assets/pictures/projects/RadarDish/RadarDish1.png';
 import RadarDish2 from '../assets/pictures/projects/RadarDish/RadarDish.png';
@@ -50,6 +51,9 @@ export default function Projects(){
                 </div>
                 
                 <ol id="projects_ProjectsList">
+                    <li className="projects_ProjectItem">
+                        <Link  to="/pong"><p id="projects_Pong" className="projects_generalFont">Press to play Pong</p></Link>
+                    </li>
                     <li className="projects_ProjectItem">
                         <div className="projects_background">
                             <p className="projects_generalFont">Radar dish ~</p>

@@ -1,0 +1,8 @@
+/** IDs **/
+#pongpage{
+    min-height: 100vh;
+    padding-top: 175px;
+    background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
+    background-blend-mode: screen;
+    overflow: hidden;
+}

@@ -4,6 +4,7 @@ import About from './pages/About'
 import Projects from './pages/Projects';
 import Interests from './pages/Interests'
 import Contacts from './pages/Contacts';
+import Pongpage from './pages/Pongpage';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/projects' element={<Projects />}/>
         <Route exact path='/interests' element={<Interests />}/>
         <Route exact path='/contacts' element={<Contacts />} />
+        <Route exact path='/pong' element={<Pongpage />} />
       </Routes>
     </div>
   );

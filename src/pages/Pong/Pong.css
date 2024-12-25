@@ -1,0 +1,65 @@
+/*** defined tags ***/
+
+/*** User classes ***/
+.Pong_mainContainer{
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    width: 500px;
+    height: 600px;
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Pong_subContainer{
+    padding: 5px;
+    width: 450px;
+    height: 450px;
+    background-color: black;
+    opacity: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Pong_subContainer:hover{   
+    padding: 5px;
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 100%;
+}
+
+.Pong_startButton{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.Pong_Player{
+    width: 450px;
+}
+
+@media (max-width: 900px ) or (pointer: coarse){
+    .Pong_mainContainer{
+        font-size: 1rem;
+        width: 80vw;
+        height: auto;
+        aspect-ratio: 3/5;
+    }
+    
+    .Pong_subContainer{
+        padding: 5px;
+        width: 60vw;
+        aspect-ratio: 1/1;
+    }
+    
+    .Pong_subContainer:hover{   
+        padding: 5px;
+        width: 60vw;
+        aspect-ratio: 1/1;
+    }
+}

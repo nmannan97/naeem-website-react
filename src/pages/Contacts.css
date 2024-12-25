@@ -40,7 +40,7 @@
     font-size: 1.5rem;
 }
 
-@media (max-width: 700px ) or (pointer: coarse){
+@media (max-width: 900px ) or (pointer: coarse){
     #contacts{
         padding-top: 100px;
     }
