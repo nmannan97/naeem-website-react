@@ -186,7 +186,8 @@
 
 @media (max-width: 700px ) or (pointer: coarse){
     #about_introWelcome{
-        font-size: 1rem;
+        font-size: 1.2rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     }
     #about_linkedin{
         width: 40vw;
@@ -198,9 +199,9 @@
     }
 
     #about_me0{
-        height: 40vh;
-        width: auto;
-        aspect-ratio: 1/1;
+        width: 80vw;
+        height: auto;
+        aspect-ratio: 4/5;
     }
     
     #about_grad{

@@ -1,5 +1,7 @@
 import React from "react";
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
+
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
 
 import './About.css'
@@ -33,12 +35,11 @@ export default function About(){
                 <div id="about_intro">
                     <p id="about_introWelcome">
                         Hello and welcome to my webpage!
-                        <br/>Click below for my Linkedin
-                        <br/>Also my email: nmannan97@gmail.com
+                        <br/>Click below for contacts!
                     </p>
                 </div>
                 <div id='about_linkedin' >
-                    <a href='https://www.linkedin.com/in/naeem-mannan-073924126/'><p id='about_font2'>Linkedin</p></a>
+                    <Link to="/contacts"><p className="navbar_font2">Contacts</p></Link>
                 </div>
                 <img id="about_me0" src={Me0} />
                 <div className="about_background">

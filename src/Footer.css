@@ -34,6 +34,11 @@
 #footer_font{
     font-size: 20px;
     text-align: center;
-    margin: auto;
+    justify-content: center;
+    display: flex;
     color: white;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    text-decoration: none;
 }

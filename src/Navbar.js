@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav id="navbar">
         <div className="navbar_container">
           <label htmlFor="navbar_checkbox" className="navbar_hamburgerlines">
             <span className={`navbar_hamburgerline ${isChecked ? "line1_active" : ""}`}></span>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import "./Footer.css"
 
@@ -13,9 +14,11 @@ export default function Footer(){
                     <img id="footer_photo" src={insignia} />
                 </div>
                 <div id="footer_linkedin">
-                    <a  id='footer_font' href='https://www.linkedin.com/in/naeem-mannan-073924126/'><p>Linkedin</p></a>
+                    <Link id="footer_font" to="/contacts"><p>Contacts</p></Link>
                 </div>
             </div>
         </>
     )
 }
+/*           
+*/

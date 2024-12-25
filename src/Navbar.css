@@ -1,3 +1,24 @@
+
+
+#navbar {
+/* Rectangle 1 */
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  left: 0px;
+  top: 0px;
+  justify-content: space-between;
+  background: #DCDCDC;
+  z-index: 8;
+
+}
+
+#navbar_name{
+  display: flex;
+  margin-top: 10px;
+}
+
 #navbar_logo{
   border-radius: 100%;
   /* Ellipse 1 */
@@ -8,9 +29,9 @@
   left: 10px;
   top: 25px;
 
-background: #404040;
-
+  background: #404040;
 }
+
 #navbar_items_list{
   list-style-type: none;
   width: auto;
@@ -31,45 +52,35 @@ background: #404040;
   color: #e7e7e7;
 }
 
-.navbar {
-/* Rectangle 1 */
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  left: 0px;
-  top: 0px;
-  justify-content: space-between;
-  background: #DCDCDC;
-  z-index: 8;
-
+#navbar_links_linkedin{
+  background: #B80F0A;
 }
-.navbar input{
-    position: absolute;
-    top: 15%;
-    left: 0.75%;
-    height: 100px;
-    width: 100px;
-    display: none;
-  }
-  /* We want all links in the navbar to be #e7e7e7 */
-  
 
-  
-  .navbar_logo{
-    /*Let's make the anchor display block.
-       This will ensure when we get the full width of the container.
-    */
-    border-radius: 100%;
-    margin: auto;
-   justify-items: left;
-   float: left;
-  }
+.navbar input{
+  position: absolute;
+  top: 15%;
+  left: 0.75%;
+  height: 100px; 
+  width: 100px;
+  display: none;
+}
+
+.navbar_logo{
+  /*Let's make the anchor display block.
+    This will ensure when we get the full width of the container.
+  */
+  border-radius: 100%;
+  margin: auto;
+  justify-items: left;
+  float: left;
+}
+
 .navbar_menu_items{
   margin-top: 50px;
 }
+
 .navbar_links{
-/* Home button */
+  /* Home button */
   height: 60px;
   width: 100px;
   margin-top: auto;
@@ -77,10 +88,6 @@ background: #404040;
   margin-right: 10px;
   background: black;
   border-radius: 50px;
-}
-
-#navbar_links_linkedin{
-  background: #B80F0A;
 }
 
 .navbar_font{
@@ -104,15 +111,15 @@ background: #404040;
   color: white;
   text-align: center;
 }
-  
-  /* When a user hovers, focuses or if the link is active change the background */
-  .navbar ul a:hover,
-  .navbar ul a:focus,
-  .navbar ul .active {
-    background-color: #272727;
-  }
 
-@media (max-width: 700px ) or (pointer: coarse){
+/* When a user hovers, focuses or if the link is active change the background */
+.navbar ul a:hover,
+.navbar ul a:focus,
+.navbar ul .active {
+  background-color: #272727;
+}
+
+@media (max-width: 900px ) or (pointer: coarse){
   #navbar_logo{
     height: 50px;
     width: 50px;
@@ -128,21 +135,17 @@ background: #404040;
     justify-content: center;
   }
 
-  .navbar {
-    position: fixed;
-    width: 100vw;
+  #navbar {
+    width: 100%;
     height: 100px;
     background: #DCDCDC;
-    z-index: 8;
+    z-index: 1;
     display: flex;
-    justify-content: space-evenly;
     overflow: visible;
   }
 
-  #navbar_checkbox {
-    display: none;
-    opacity: 1;
-    z-index: 99;
+  #navbar_name{
+    margin-top: -5px;
   }
 
   /* When the checkbox is checked, slide the menu in */
@@ -151,14 +154,14 @@ background: #404040;
   }
 
   .navbar_menu_items {
-    list-style-type: none;
     display: flex;
     justify-content: center;
     background-color: rgba(128, 0, 0, 0.9);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin: auto;
-    transform: translateY(calc(100vh)); /* Initially off-screen */
+    position: fixed;
+    transform: translateY(calc(-100vh)); /* Initially off-screen */
     transition: transform 0.3s ease-in-out; /* Smooth transition for sliding in */
   }
 
@@ -196,7 +199,7 @@ background: #404040;
   /* Active state for the third line */
   .line3_active {
     transform: rotate(-45deg) translate(5px, -7.5px);
-}
+  }
 
   .navbar_font{
     font: italic 1.25rem "Fira Sans", serif;
@@ -214,6 +217,7 @@ background: #404040;
     text-align: center;
     margin: auto;
     justify-content: center;
+    text-decoration: none;
   }
 
   .navbar_profile_link{
@@ -227,8 +231,6 @@ background: #404040;
     color: black;
     width: 50vw;
     margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
     z-index: 9;
   }
 
