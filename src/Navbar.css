@@ -112,7 +112,7 @@ background: #404040;
     background-color: #272727;
   }
 
-@media (max-width: 900px ) or (pointer: coarse){
+@media (max-width: 700px ) or (pointer: coarse){
   #navbar_logo{
     height: 50px;
     width: 50px;

@@ -148,8 +148,3 @@ export default function Projects(){
         </>
     )
 }
-
-/**
- * 
- * 
- */

@@ -43,7 +43,9 @@
     display: block;
     margin-top: 10px;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
+
 .projects_Photos{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates 3 equal columns */
@@ -104,7 +106,7 @@
     margin-left: 20px;
 }
 
-@media (pointer:none), (pointer:coarse) {
+@media (max-width: 900px ) or (pointer:none), (pointer:coarse) {
     #projects{
         padding-top: 100px;
     }
@@ -126,9 +128,15 @@
     .projects_projectDiv{
         height: 35vh;
         width: 40vw;
+        margin-top: 10px;
     }
     .projects_Video{
         height: 22.5vh;
+    }
+
+    .projects_Photos{
+        display: inline;
+        grid-template-columns: 0; /* Creates 3 equal columns */
     }
     
 }
