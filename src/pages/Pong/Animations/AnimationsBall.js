@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { playerPosition } from './AnimationsPlayer';
 import '../Pong.css';
 
@@ -12,7 +12,6 @@ var ballPosition = {
     x: 70,
     y: 450
 }
-
 
 const AnimationsBall = props => {
   
@@ -45,13 +44,15 @@ const AnimationsBall = props => {
           ballPosition.y += -Move.pixels;
         }
       }
-      if(ballPosition.x > (canvasBall.offsetWidth*2 - 10)){
+      if(ballPosition.x > (canvasBall.offsetWidth*2)){
         Move.x = false;
       }else if(ballPosition.y >= (canvasBall.offsetHeight*2 -10)){
         Move.y = false;
       }else if(ballPosition.y < 10){
         Move.y = true;
-      }else if((ballPosition.x == (playerPosition.x + 45)) && (ballPosition.y < playerPosition.y + 25 || ballPosition.y > playerPosition.y -25)){
+      }else if((ballPosition.x == (playerPosition.x + 30)) && (ballPosition.y < playerPosition.y + 25 || ballPosition.y > playerPosition.y -25)){
+        Move.x = true;
+      }else if((ballPosition.y == (playerPosition.y)) && (ballPosition.y < playerPosition.y + 25 || ballPosition.y > playerPosition.y -25)){
         Move.x = true;
       }else if(ballPosition.x <= 0){
         Move.pixels = 0;
@@ -77,13 +78,13 @@ const AnimationsBall = props => {
         context.stroke();
     }
 
-    canvasBall.addEventListener('mouseover' || 'mousedown', function(event) {
+    canvasBall.addEventListener('mouseover', function(event) {
       Move.permission = true;
       clear_Run(); 
     });
     
     canvasBall.addEventListener('mouseout' || 'mouseup', function(event) {
-      Move.permission = false;
+      Move.permission = true;
     });
 
       

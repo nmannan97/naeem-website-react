@@ -21,19 +21,17 @@ export default function Playerbar(){
 
     const handleDragStart = (e) =>{
         const id = e.target.id();
-
     }
 
     const handleDragEnd = (e) =>{
         const id = e.target.id();
-
     }
 
     return(
         <div id="playerBar">
             <Rect
             x={20}
-            y={50}
+            y={0}
             width={20}
             height={100}
             fill="black"

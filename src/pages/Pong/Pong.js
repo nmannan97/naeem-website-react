@@ -9,7 +9,7 @@ export default function Pong(){
             Pong
             <div id="Pong_container2" className="Pong_subContainer">
                 <canvas id='Pong'></canvas>
-                <Playerbar/>
+                <Playerbar/> 
                 <Ball/>
             </div>  
         </div>   

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../Pong.css';
 
 var drag = false;
 var playerPosition = {
   x : 20,
-  y: -20
+  y: 0
 };
 
 const AnimationsPlayer = props => {
@@ -18,16 +18,15 @@ const AnimationsPlayer = props => {
     canvasPlayer.height = 450;
 
     function clear() {
-        context.clearRect(0, 0, canvasPlayer.width, canvasPlayer.height);
+      context.clearRect(0, 0, canvasPlayer.width, canvasPlayer.height);
     }
 
     function draw(yPosition) {
-        context.fillRect(playerPosition.x, yPosition - 125, 5, 50);
+      context.fillRect(playerPosition.x, yPosition - 245, 5, 50);
     }
 
-    canvasPlayer.addEventListener('mouseover' || 'mousedown', function(event) {
+    canvasPlayer.addEventListener('mouseover', function(event) {
       drag = true;
-  
     });
     
     canvasPlayer.addEventListener('mousemove', function(event) {
@@ -37,12 +36,10 @@ const AnimationsPlayer = props => {
         playerPosition.y = event.clientY
         
       }
-    
-      });
+    });
     
       canvasPlayer.addEventListener('mouseout' || 'mouseup', function(event) {
         drag = false;
-    
       });
 
       

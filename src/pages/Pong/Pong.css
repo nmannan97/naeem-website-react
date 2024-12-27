@@ -13,9 +13,10 @@
 }
 
 .Pong_subContainer{
-    padding: 5px;
-    width: 450px;
+    width: 500px;
     height: 450px;
+    display: block;
+    justify-content: center;
     background-color: black;
     opacity: 10%;
     margin-left: auto;
@@ -23,10 +24,10 @@
 }
 
 .Pong_subContainer:hover{   
-    padding: 5px;
-    width: 450px;
+    width: 500px;
     height: 450px;
     background-color: white;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     opacity: 100%;
