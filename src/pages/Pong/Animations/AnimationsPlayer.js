@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import '../Pong.css';
 
-var drag = false;
-var playerPosition = {
-  x : 20,
-  y: 0
-};
-
-const AnimationsPlayer = props => {
+export default function AnimationsPlayer() {
   
+  const [player, setPlayer] = useState({x: 20, y:50})
+  const [drag, setDrag] = useState(false)
+
   useEffect(() => {
     
     const canvasPlayer = document.getElementById("Pong")
@@ -21,33 +18,34 @@ const AnimationsPlayer = props => {
       context.clearRect(0, 0, canvasPlayer.width, canvasPlayer.height);
     }
 
-    function draw(yPosition) {
-      context.fillRect(playerPosition.x, yPosition - 245, 5, 50);
+    function draw() {
+      context.fillRect(player.x, player.y - 125, 5, 50);
+      //player.y = yPosition
     }
 
     canvasPlayer.addEventListener('mouseover', function(event) {
-      drag = true;
+      setDrag(true);
+      console.log("Player position Y: " , player.y)
     });
     
     canvasPlayer.addEventListener('mousemove', function(event) {
       clear()
       if (drag) { 
-        //context.translate(0, event.clientY)
-        playerPosition.y = event.clientY
-        
+        setPlayer({x:20, y:event.clientY})
+        //player.y = event.clientY
       }
     });
     
-      canvasPlayer.addEventListener('mouseout' || 'mouseup', function(event) {
-        drag = false;
-      });
-
-      
+    canvasPlayer.addEventListener('mouseout', mouseOut) 
+    canvasPlayer.addEventListener('mouseout', mouseOut) 
+    function mouseOut() {
+      setDrag(false);
+    }
+ 
     let animationFrameId
     
-    
     const render = () => {
-      draw(playerPosition.y)
+      draw()
       animationFrameId = window.requestAnimationFrame(render)
     }
     render()
@@ -55,7 +53,7 @@ const AnimationsPlayer = props => {
     return () => {
       window.cancelAnimationFrame(animationFrameId)
     }
-  }, [])
+  }, 10)
 
   return(
       <p>
@@ -63,6 +61,3 @@ const AnimationsPlayer = props => {
       </p>
   );
 }
-
-export {playerPosition}
-export default AnimationsPlayer

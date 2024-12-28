@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { playerPosition } from './AnimationsPlayer';
 import '../Pong.css';
 
@@ -15,6 +15,8 @@ var ballPosition = {
 
 const AnimationsBall = props => {
   
+  const [player, setPlayer] = useState({x:20, y:0})
+
   useEffect(() => {
     
     const canvasBall = document.getElementById('Pong')
@@ -44,15 +46,13 @@ const AnimationsBall = props => {
           ballPosition.y += -Move.pixels;
         }
       }
-      if(ballPosition.x > (canvasBall.offsetWidth*2)){
+      if(ballPosition.x > (canvasBall.offsetWidth*2 - 10)){
         Move.x = false;
-      }else if(ballPosition.y >= (canvasBall.offsetHeight*2 -10)){
+      }else if(ballPosition.y >= (canvasBall.offsetHeight*2-10)){
         Move.y = false;
       }else if(ballPosition.y < 10){
         Move.y = true;
-      }else if((ballPosition.x == (playerPosition.x + 30)) && (ballPosition.y < playerPosition.y + 25 || ballPosition.y > playerPosition.y -25)){
-        Move.x = true;
-      }else if((ballPosition.y == (playerPosition.y)) && (ballPosition.y < playerPosition.y + 25 || ballPosition.y > playerPosition.y -25)){
+      }else if((ballPosition.x == (player.x + 30)) && (ballPosition.y > player.y + 25 || ballPosition.y < player.y -25)){
         Move.x = true;
       }else if(ballPosition.x <= 0){
         Move.pixels = 0;
@@ -78,14 +78,21 @@ const AnimationsBall = props => {
         context.stroke();
     }
 
-    canvasBall.addEventListener('mouseover', function(event) {
+
+    canvasBall.addEventListener('mouseover', handleMouse);
+    canvasBall.addEventListener('mousemove', handleMouse);
+    function handleMouse(event) {
       Move.permission = true;
       clear_Run(); 
-    });
+      setPlayer({...player, y:event.clientY})
+      //console.log("Y player position: ", player.y)
+    }
     
-    canvasBall.addEventListener('mouseout' || 'mouseup', function(event) {
+    canvasBall.addEventListener('mouseout', handleMouseOut);
+    canvasBall.addEventListener('mouseup', handleMouseOut);
+    function handleMouseOut(event) {
       Move.permission = true;
-    });
+    };
 
       
     let animationFrameId
@@ -101,7 +108,7 @@ const AnimationsBall = props => {
     return () => {
       window.cancelAnimationFrame(animationFrameId)
     }
-  }, [])
+  })
 
   return(
       <p>
