@@ -11,7 +11,7 @@ const AnimationsBall = () => {
     const canvas = canvasRef.current;
     if (!canvas) return; // Safety check
     const context = canvas.getContext('2d');
-    canvas.width = 450;
+    canvas.width = 449;
     canvas.height = 450;
 
     let animationFrameId;
@@ -86,7 +86,7 @@ const AnimationsBall = () => {
     return () => {
       window.cancelAnimationFrame(animationFrameId);
     };
-  }, [player, ball]);
+  });
 
   // Handle paddle movement
   const handleMouseMove = (event) => {
@@ -110,7 +110,6 @@ const AnimationsBall = () => {
         style={{ border: '1px solid black' }}
         onMouseMove={handleMouseMove}
       ></canvas>
-      <button onClick={startBall}>Start Ball</button>
       <p>Score: {score}</p>
     </div>
   );

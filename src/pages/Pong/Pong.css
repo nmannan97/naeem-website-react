@@ -7,6 +7,14 @@
 #Pong_container2{
     display: inline-block;
     height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+#Pong_title{
+    text-align: center;
+
 }
 /*** User classes ***/
 
@@ -23,8 +31,8 @@
 }
 
 .Pong_subContainer{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     display: block;
     justify-content: center;
     background-color: black;
@@ -34,8 +42,8 @@
 }
 
 .Pong_subContainer:hover{   
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     background-color: white;
     justify-content: center;
     margin-left: auto;
