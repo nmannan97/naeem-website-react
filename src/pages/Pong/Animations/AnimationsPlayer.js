@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import '../Pong.css';
 
 export default function AnimationsPlayer() {
-  
-  const [player, setPlayer] = useState({x: 20, y:50})
-  const [drag, setDrag] = useState(false)
+  const [player, setPlayer] = useState({ x: 20, y: 0 });
+  const [drag, setDrag] = useState(false);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
-    
-    const canvasPlayer = document.getElementById("Pong")
-    const context = canvasPlayer.getContext('2d')
+    const canvasPlayer = canvasRef.current;
+    const context = canvasPlayer.getContext('2d');
 
     canvasPlayer.width = 450;
     canvasPlayer.height = 450;
@@ -19,45 +18,54 @@ export default function AnimationsPlayer() {
     }
 
     function draw() {
-      context.fillRect(player.x, player.y - 125, 5, 50);
-      //player.y = yPosition
+      clear();
+      context.fillStyle = 'black'; // Ensure the rectangle is visible
+      context.fillRect(player.x, player.y - 25, 5, 50); // Adjusted for accurate positioning
     }
 
-    canvasPlayer.addEventListener('mouseover', function(event) {
-      setDrag(true);
-      console.log("Player position Y: " , player.y)
-    });
-    
-    canvasPlayer.addEventListener('mousemove', function(event) {
-      clear()
-      if (drag) { 
-        setPlayer({x:20, y:event.clientY})
-        //player.y = event.clientY
+    function handleMouseMove(event) {
+      if (drag) {
+        setPlayer(prevPlayer => ({
+          ...prevPlayer,
+          y: event.clientY - canvasPlayer.getBoundingClientRect().top, // Adjust for canvas offset
+        }));
       }
-    });
-    
-    canvasPlayer.addEventListener('mouseout', mouseOut) 
-    canvasPlayer.addEventListener('mouseout', mouseOut) 
-    function mouseOut() {
+    }
+
+    function handleMouseOver() {
+      setDrag(true);
+    }
+
+    function handleMouseOut() {
       setDrag(false);
     }
- 
-    let animationFrameId
-    
-    const render = () => {
-      draw()
-      animationFrameId = window.requestAnimationFrame(render)
-    }
-    render()
-    
-    return () => {
-      window.cancelAnimationFrame(animationFrameId)
-    }
-  }, 10)
 
-  return(
-      <p>
-        Player 
-      </p>
+    // Add event listeners
+    canvasPlayer.addEventListener('mousemove', handleMouseMove);
+    canvasPlayer.addEventListener('mouseover', handleMouseOver);
+    canvasPlayer.addEventListener('mouseout', handleMouseOut);
+
+    // Animation loop
+    let animationFrameId;
+    const render = () => {
+      draw();
+      animationFrameId = window.requestAnimationFrame(render);
+    };
+    render();
+
+    // Cleanup
+    return () => {
+      canvasPlayer.removeEventListener('mousemove', handleMouseMove);
+      canvasPlayer.removeEventListener('mouseover', handleMouseOver);
+      canvasPlayer.removeEventListener('mouseout', handleMouseOut);
+      window.cancelAnimationFrame(animationFrameId);
+    };
+  }, [drag, player]); // Depend on `drag` and `player` to ensure proper updates
+
+  return (
+    <div>
+      <canvas className="Pong_Canvas" ref={canvasRef} style={{ border: '1px solid black' }}></canvas>
+      <p>Player position: ({player.x}, {player.y})</p>
+    </div>
   );
 }
