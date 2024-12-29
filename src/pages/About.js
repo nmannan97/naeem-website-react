@@ -16,8 +16,9 @@ import SJ from '../assets/pictures/SanJose.png'
 import GF from '../assets/pictures/Companies/GF.png'
 import WD from '../assets/pictures/Companies/WD.png'
 import Google from '../assets/pictures/Companies/Google.png'
-import Meta from '../assets/pictures/Companies/Meta.png'
 import Kinekt from '../assets/pictures/Companies/kinectai_logo.jpg'
+import Meta from '../assets/pictures/Companies/Meta.png'
+import Microsoft from '../assets/pictures/Companies/MicrosoftLogo.jpg'
 
 export default function About(){
 
@@ -25,7 +26,8 @@ export default function About(){
         [WD, "Western Digital", "Test engineer"],
         [Google, "Google", "Peak power validation engineer"],
         [Kinekt, "Kinekt AI", "UI developer and advisor"],
-        [Meta, "Meta", "Test engineer"] 
+        [Meta, "Meta", "Test engineer"], 
+        [Microsoft, "Microsoft", "Lead Silicon validation engineer"]
     ];
 
     return(
