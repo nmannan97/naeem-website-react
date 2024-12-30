@@ -74,7 +74,10 @@ export default function About(){
                     <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
                         {Images.map((photos, index) => (
                             <div className="about_polaroid1" key={index}>
-                                <img className="about_workPlaces" src={photos[0]} alt={`Image ${index}`} />
+                                <br />
+                                <div className="about_workPlaces">
+                                    <img src={photos[0]} alt={`Image ${index}`} />   
+                                </div>
                                 <p className="about_workNames"> {photos[1]} </p>
                                 <p className="about_workNameJob"> Job title: {photos[2]} </p>
                             </div>
