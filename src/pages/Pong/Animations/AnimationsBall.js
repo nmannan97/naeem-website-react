@@ -11,15 +11,15 @@ const AnimationsBall = () => {
     const canvas = canvasRef.current;
     if (!canvas) return; // Safety check
     const context = canvas.getContext('2d');
-    canvas.width = 449;
-    canvas.height = 450;
+    canvas.width = document.getElementById("PongCanvas").width;
+    canvas.height = document.getElementById("PongCanvas").width;
 
     let animationFrameId;
 
     // Draw the paddle (player)
     const drawPlayer = () => {
       context.fillStyle = 'black';
-      context.fillRect(player.x, player.y - 30, 5, 60); // Paddle dimensions
+      context.fillRect(player.x, 0.7*(player.y - canvas.width), 0.005*canvas.width, 0.15*canvas.width); // Paddle dimensions
     };
 
     // Draw the ball
@@ -106,8 +106,8 @@ const AnimationsBall = () => {
     <div>
       <canvas
         ref={canvasRef} // Attach the ref to the canvas element
-        id="Pong"
-        style={{ border: '1px solid black' }}
+        id="PongCanvas"
+        style={{ border: '1px solid black', height: "60vh", aspectRatio: "1/1"}}
         onMouseMove={handleMouseMove}
       ></canvas>
       <p>Score: {score}</p>
