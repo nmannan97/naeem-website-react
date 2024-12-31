@@ -26,8 +26,8 @@ export default function AnimationsBall() {
         x: canvas.width / 4,
         y: canvas.height / 2,
         radius: canvas.width / 75, // Ball radius scales with canvas size
-        dx: canvas.width / 150,   // Ball speed scales with canvas size
-        dy: canvas.height / 150,
+        dx: canvas.width / 100,   // Ball speed scales with canvas size
+        dy: canvas.height / 100,
       };
     };
 
@@ -100,18 +100,18 @@ export default function AnimationsBall() {
           ball.y > player.y - 25 &&
           ball.y < player.y + 25
         ) {
-          setBall(prev => ({ ...prev, dx: -prev.dx }));
+          ball.dx = -ball.dx;
           setScore(prevScore => prevScore + 1);
         }
 
         // Reset if the ball goes out of bounds
         if (ball.x + ball.dx < 0) {
-          setBall({ x: player.x + 20, y: player.y, dx: 3, dy: 3, moving: false });
+          ball.x= player.x + 20 
+          ball.y= player.y
+          ball.dx= 3
+          ball.dy= 3
           setScore(0);
         }
-      } else {
-        // Make the ball follow the paddle
-        setBall(prev => ({ ...prev, x: player.x + 20, y: player.y }));
       }
     };
 
@@ -140,6 +140,7 @@ export default function AnimationsBall() {
   };
 
   function restartButton() {
+    setMove(!move)
     setMove(true)
   }
 
@@ -158,4 +159,3 @@ export default function AnimationsBall() {
     </div>
   );
 };
-
