@@ -4,7 +4,7 @@ import '../Pong.css';
 export default function AnimationsBall() {
   const canvasRef = useRef(null);
   const playerRef = useRef({ x: 20, y: 200 }); // Paddle's position (ref for animation loop)
-  const ballRef = useRef({ x: 50, y: 200, dx: 2, dy: 2, radius: 10 }); // Ball's position (ref for animation loop)
+  const ballRef = useRef({ x: 50, y: 200, dx: 2, dy: 2, radius: 0 }); // Ball's position (ref for animation loop)
   const [move, setMove] = useState(false)
   const [score, setScore] = useState(0);
 
@@ -25,7 +25,7 @@ export default function AnimationsBall() {
         ...ballRef.current,
         x: canvas.width / 4,
         y: canvas.height / 2,
-        radius: canvas.width / 50, // Ball radius scales with canvas size
+        radius: canvas.width / 75, // Ball radius scales with canvas size
         dx: canvas.width / 150,   // Ball speed scales with canvas size
         dy: canvas.height / 150,
       };
@@ -131,11 +131,11 @@ export default function AnimationsBall() {
       <canvas
         ref={canvasRef}
         id="Pong_canvas"
-        style={{ border: '1px solid black', height: '60vh', aspectRatio: '1 / 1' }}
+        style={{ border: '1px solid black', maxWidth: "90vw" , height: '60vh', aspectRatio: '1 / 1' }}
         onMouseMove={handleMouseMove} // Attach the mouse move handler
       ></canvas>
-      <button style={{ border: '1px solid black', height: '50px', aspectRatio: '5 / 1' }} onClick={restartButton}> 
-          <p style={{ fontSize: "25px", margin: "auto"}}> Start / Restart </p>
+      <button style={{ border: '1px solid black', height: '50px', aspectRatio: '5 / 1', backgroundColor: "red", borderRadius: "10px" }} onClick={restartButton}> 
+          <p style={{ fontSize: "25px", margin: "auto"}}> Start / Restart game </p>
         </button>
       <p>Score: {score}</p>
     </div>
