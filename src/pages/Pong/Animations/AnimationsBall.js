@@ -1,54 +1,97 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../Pong.css';
 
-const AnimationsBall = () => {
-  const canvasRef = useRef(null); // Ref to access the canvas
-  const [player, setPlayer] = useState({ x: 20, y: 200 }); // Paddle's position
-  const [ball, setBall] = useState({ x: 40, y: 200, dx: 3, dy: 3, moving: true }); // Ball's position
+export default function AnimationsBall() {
+  const canvasRef = useRef(null);
+  const playerRef = useRef({ x: 20, y: 200 }); // Paddle's position (ref for animation loop)
+  const ballRef = useRef({ x: 50, y: 200, dx: 2, dy: 2, radius: 0 }); // Ball's position (ref for animation loop)
+  const [move, setMove] = useState(false)
   const [score, setScore] = useState(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return; // Safety check
+    if (!canvas) return; // Ensure canvas exists
     const context = canvas.getContext('2d');
-    canvas.width = document.getElementById("PongCanvas").width;
-    canvas.height = document.getElementById("PongCanvas").width;
+
+    // Set the canvas dimensions dynamically
+    const updateCanvasDimensions = () => {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+
+      // Reset positions proportionally
+      playerRef.current.y = canvas.height / 2;
+      ballRef.current = {
+        ...ballRef.current,
+        x: canvas.width / 4,
+        y: canvas.height / 2,
+        radius: canvas.width / 75, // Ball radius scales with canvas size
+        dx: canvas.width / 150,   // Ball speed scales with canvas size
+        dy: canvas.height / 150,
+      };
+    };
+
+    updateCanvasDimensions();
+    window.addEventListener('resize', updateCanvasDimensions);
 
     let animationFrameId;
 
-    // Draw the paddle (player)
     const drawPlayer = () => {
       context.fillStyle = 'black';
-      context.fillRect(player.x, 0.7*(player.y - canvas.width), 0.005*canvas.width, 0.15*canvas.width); // Paddle dimensions
+      const player = playerRef.current;
+      context.fillRect(player.x, player.y - canvas.height / 10, canvas.width / 50, canvas.height / 5); // Paddle dimensions
     };
 
-    // Draw the ball
     const drawBall = () => {
+      const ball = ballRef.current;
       context.beginPath();
-      context.arc(ball.x, ball.y, 5, 0, Math.PI * 2);
+      context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2); // Draw the ball
       context.fillStyle = 'red';
       context.fill();
       context.closePath();
     };
 
-    // Clear the canvas
     const clearCanvas = () => {
       context.clearRect(0, 0, canvas.width, canvas.height);
     };
 
-    // Ball and paddle movement logic
     const updateBall = () => {
-      if (ball.moving) {
+      if(move == true){
+        const ball = ballRef.current;
+        const player = playerRef.current;
+
         // Move the ball
-        setBall(prev => ({
-          ...prev,
-          x: prev.x + prev.dx,
-          y: prev.y + prev.dy,
-        }));
+        ball.x += ball.dx;
+        ball.y += ball.dy;
 
         // Bounce off top and bottom walls
-        if (ball.y + ball.dy < 5 || ball.y + ball.dy > canvas.height - 5) {
-          setBall(prev => ({ ...prev, dy: -prev.dy }));
+        if (ball.y + ball.dy < ball.radius || ball.y + ball.dy > canvas.height - ball.radius) {
+          ball.dy = -ball.dy;
+        }
+
+        // Bounce off the paddle
+        if (
+          ball.x + ball.dx < player.x + canvas.width / 50 &&
+          ball.y > player.y - canvas.height / 10 &&
+          ball.y < player.y + canvas.height / 10
+        ) {
+          ball.dx = -ball.dx;
+          setScore(prevScore => prevScore + 1);
+        }
+
+        // Reset if the ball goes out of bounds
+        if (ball.x + ball.dx < 0) {
+          ball.x = canvas.width / 4;
+          ball.y = canvas.height / 2;
+          ball.dx = canvas.width / 150;
+          ball.dy = canvas.height / 150;
+          setScore(0);
+          setMove(false)
+        }
+
+        if (ball.x + ball.dx > canvas.width) {
+          ball.dy = ball.dy;
+          ball.dx = -ball.dx;
         }
 
         // Bounce off the paddle
@@ -82,37 +125,37 @@ const AnimationsBall = () => {
 
     render();
 
-    // Cleanup on component unmount
+    // Cleanup
     return () => {
+      window.removeEventListener('resize', updateCanvasDimensions);
       window.cancelAnimationFrame(animationFrameId);
     };
-  });
-
-  // Handle paddle movement
+  }, [move]);
   const handleMouseMove = (event) => {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
     const mouseY = event.clientY - rect.top;
-
-    setPlayer(prev => ({ ...prev, y: mouseY }));
+    // Update the paddle position in the ref
+    playerRef.current.y = Math.min(Math.max(mouseY, canvas.height / 10), canvas.height - canvas.height / 10);
   };
 
-  // Start the ball's independent movement
-  const startBall = () => {
-    setBall(prev => ({ ...prev, moving: true }));
-  };
+  function restartButton() {
+    setMove(true)
+  }
 
   return (
     <div>
       <canvas
-        ref={canvasRef} // Attach the ref to the canvas element
-        id="PongCanvas"
-        style={{ border: '1px solid black', height: "60vh", aspectRatio: "1/1"}}
-        onMouseMove={handleMouseMove}
+        ref={canvasRef}
+        id="Pong_canvas"
+        style={{ border: '1px solid black', maxWidth: "90vw" , height: '60vh', aspectRatio: '1 / 1' }}
+        onMouseMove={handleMouseMove} // Attach the mouse move handler
       ></canvas>
+      <button style={{ border: '1px solid black', height: '50px', aspectRatio: '5 / 1', backgroundColor: "red", borderRadius: "10px" }} onClick={restartButton}> 
+          <p style={{ fontSize: "25px", margin: "auto"}}> Start / Restart game </p>
+        </button>
       <p>Score: {score}</p>
     </div>
   );
 };
 
-export default AnimationsBall;
