@@ -16,8 +16,9 @@ import SJ from '../assets/pictures/SanJose.png'
 import GF from '../assets/pictures/Companies/GF.png'
 import WD from '../assets/pictures/Companies/WD.png'
 import Google from '../assets/pictures/Companies/Google.png'
-import Meta from '../assets/pictures/Companies/Meta.png'
 import Kinekt from '../assets/pictures/Companies/kinectai_logo.jpg'
+import Meta from '../assets/pictures/Companies/Meta.png'
+import Microsoft from '../assets/pictures/Companies/MicrosoftLogo.jpg'
 
 export default function About(){
 
@@ -25,7 +26,8 @@ export default function About(){
         [WD, "Western Digital", "Test engineer"],
         [Google, "Google", "Peak power validation engineer"],
         [Kinekt, "Kinekt AI", "UI developer and advisor"],
-        [Meta, "Meta", "Test engineer"] 
+        [Meta, "Meta", "Test engineer"], 
+        [Microsoft, "Microsoft", "Lead Silicon validation engineer"]
     ];
 
     return(
@@ -72,7 +74,10 @@ export default function About(){
                     <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
                         {Images.map((photos, index) => (
                             <div className="about_polaroid1" key={index}>
-                                <img className="about_workPlaces" src={photos[0]} alt={`Image ${index}`} />
+                                <br />
+                                <div className="about_workPlaces">
+                                    <img src={photos[0]} alt={`Image ${index}`} />   
+                                </div>
                                 <p className="about_workNames"> {photos[1]} </p>
                                 <p className="about_workNameJob"> Job title: {photos[2]} </p>
                             </div>
