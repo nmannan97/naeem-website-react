@@ -6,11 +6,9 @@ export default function Pong(){
     
     return(
         <div id="Pong_container1" className="Pong_mainContainer">
-            Pong
+            <p id="Pong_title"><i>Pong</i></p>
             <div id="Pong_container2" className="Pong_subContainer">
-                <canvas id='Pong'></canvas>
-                <Playerbar/> 
-                <Ball/>
+                <Ball />
             </div>  
         </div>   
     );

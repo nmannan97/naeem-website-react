@@ -1,113 +1,118 @@
-import React, { useEffect } from 'react'
-import { playerPosition } from './AnimationsPlayer';
+import React, { useState, useEffect, useRef } from 'react';
 import '../Pong.css';
 
-var Move = {
-  permission : false,
-  x : true, // if false, move in negative X pixels
-  y : true, // if false, move in negative Y pixels
-  pixels : 5
-}
-var ballPosition = {
-    x: 70,
-    y: 450
-}
+const AnimationsBall = () => {
+  const canvasRef = useRef(null); // Ref to access the canvas
+  const [player, setPlayer] = useState({ x: 20, y: 200 }); // Paddle's position
+  const [ball, setBall] = useState({ x: 40, y: 200, dx: 3, dy: 3, moving: true }); // Ball's position
+  const [score, setScore] = useState(0);
 
-const AnimationsBall = props => {
-  
   useEffect(() => {
-    
-    const canvasBall = document.getElementById('Pong')
-    const context = canvasBall.getContext('2d')
+    const canvas = canvasRef.current;
+    if (!canvas) return; // Safety check
+    const context = canvas.getContext('2d');
+    canvas.width = document.getElementById("PongCanvas").width;
+    canvas.height = document.getElementById("PongCanvas").width;
 
-    var timer;
+    let animationFrameId;
 
-    function clear_Run() {
-      timer = setInterval(function() {
-          clearBall()
-      }, 5);
-    }
-    function movement(){
-      if(Move.permission){
+    // Draw the paddle (player)
+    const drawPlayer = () => {
+      context.fillStyle = 'black';
+      context.fillRect(player.x, 0.7*(player.y - canvas.width), 0.005*canvas.width, 0.15*canvas.width); // Paddle dimensions
+    };
 
-        if(Move.x && Move.y){
-          ballPosition.x += Move.pixels;
-          ballPosition.y += Move.pixels;
-        } else if(Move.x && ~Move.y){
-          ballPosition.x += Move.pixels;
-          ballPosition.y += -Move.pixels;
-        } else if(~Move.x && Move.y){
-          ballPosition.x += -Move.pixels;
-          ballPosition.y += Move.pixels;
-        }else if(~Move.x && ~Move.y){
-          ballPosition.x += -Move.pixels;
-          ballPosition.y += -Move.pixels;
+    // Draw the ball
+    const drawBall = () => {
+      context.beginPath();
+      context.arc(ball.x, ball.y, 5, 0, Math.PI * 2);
+      context.fillStyle = 'red';
+      context.fill();
+      context.closePath();
+    };
+
+    // Clear the canvas
+    const clearCanvas = () => {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+    };
+
+    // Ball and paddle movement logic
+    const updateBall = () => {
+      if (ball.moving) {
+        // Move the ball
+        setBall(prev => ({
+          ...prev,
+          x: prev.x + prev.dx,
+          y: prev.y + prev.dy,
+        }));
+
+        // Bounce off top and bottom walls
+        if (ball.y + ball.dy < 5 || ball.y + ball.dy > canvas.height - 5) {
+          setBall(prev => ({ ...prev, dy: -prev.dy }));
         }
+
+        // Bounce off the paddle
+        if (
+          ball.x + ball.dx < player.x + 10 &&
+          ball.y > player.y - 25 &&
+          ball.y < player.y + 25
+        ) {
+          setBall(prev => ({ ...prev, dx: -prev.dx }));
+          setScore(prevScore => prevScore + 1);
+        }
+
+        // Reset if the ball goes out of bounds
+        if (ball.x + ball.dx < 0) {
+          setBall({ x: player.x + 20, y: player.y, dx: 3, dy: 3, moving: false });
+          setScore(0);
+        }
+      } else {
+        // Make the ball follow the paddle
+        setBall(prev => ({ ...prev, x: player.x + 20, y: player.y }));
       }
-      if(ballPosition.x > (canvasBall.offsetWidth*2)){
-        Move.x = false;
-      }else if(ballPosition.y >= (canvasBall.offsetHeight*2 -10)){
-        Move.y = false;
-      }else if(ballPosition.y < 10){
-        Move.y = true;
-      }else if((ballPosition.x == (playerPosition.x + 30)) && (ballPosition.y < playerPosition.y + 25 || ballPosition.y > playerPosition.y -25)){
-        Move.x = true;
-      }else if((ballPosition.y == (playerPosition.y)) && (ballPosition.y < playerPosition.y + 25 || ballPosition.y > playerPosition.y -25)){
-        Move.x = true;
-      }else if(ballPosition.x <= 0){
-        Move.pixels = 0;
-      }
-      if(ballPosition.x < -40){
-        ballPosition.x = 20;
-        Move.x = true;
-      }
-    }
+    };
 
-    function clearBall() {
-        context.clearRect(0, 0, canvasBall.width, canvasBall.height);
-    }
-
-    function draw(xPosition, yPosition) {
-        //console.log(xPosition, yPosition);
-        context.beginPath();
-        context.arc(xPosition/2, yPosition/2, 5, 0, 2*Math.PI);
-        context.fillStyle = 'black';
-        context.fill();
-        context.lineWidth = 5;
-        context.strokeStyle = 'black';
-        context.stroke();
-    }
-
-    canvasBall.addEventListener('mouseover', function(event) {
-      Move.permission = true;
-      clear_Run(); 
-    });
-    
-    canvasBall.addEventListener('mouseout' || 'mouseup', function(event) {
-      Move.permission = true;
-    });
-
-      
-    let animationFrameId
-    
-    
     const render = () => {
-      movement();
-      draw(ballPosition.x, ballPosition.y)
-      animationFrameId = window.requestAnimationFrame(render)
-    }
-    render()
-    
-    return () => {
-      window.cancelAnimationFrame(animationFrameId)
-    }
-  }, [])
+      clearCanvas();
+      drawPlayer();
+      drawBall();
+      updateBall();
+      animationFrameId = window.requestAnimationFrame(render);
+    };
 
-  return(
-      <p>
-          Score
-      </p>
+    render();
+
+    // Cleanup on component unmount
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+    };
+  });
+
+  // Handle paddle movement
+  const handleMouseMove = (event) => {
+    const canvas = canvasRef.current;
+    const rect = canvas.getBoundingClientRect();
+    const mouseY = event.clientY - rect.top;
+
+    setPlayer(prev => ({ ...prev, y: mouseY }));
+  };
+
+  // Start the ball's independent movement
+  const startBall = () => {
+    setBall(prev => ({ ...prev, moving: true }));
+  };
+
+  return (
+    <div>
+      <canvas
+        ref={canvasRef} // Attach the ref to the canvas element
+        id="PongCanvas"
+        style={{ border: '1px solid black', height: "60vh", aspectRatio: "1/1"}}
+        onMouseMove={handleMouseMove}
+      ></canvas>
+      <p>Score: {score}</p>
+    </div>
   );
-}
+};
 
 export default AnimationsBall;

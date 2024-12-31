@@ -1,20 +1,39 @@
 /*** defined tags ***/
+#Pong_playerArea{
+    display: flex;
+    width: 500px;
+}
 
+#Pong_container2{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+#Pong_title{
+    text-align: center;
+
+}
 /*** User classes ***/
+
 .Pong_mainContainer{
-    font-size: 20px;
+    font-size: 2.5rem;
     text-align: center;
     padding: 5px;
-    width: 500px;
-    height: 600px;
+    height: 65vh;
+    width: auto;
+    aspect-ratio: 1/1;
     background-color: whitesmoke;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 250px;
 }
 
 .Pong_subContainer{
-    width: 500px;
-    height: 450px;
+    height: 60vh;
+    aspect-ratio: 1/1;
+    width: auto;
     display: block;
     justify-content: center;
     background-color: black;
@@ -24,8 +43,9 @@
 }
 
 .Pong_subContainer:hover{   
-    width: 500px;
-    height: 450px;
+    height: 60vh;
+    aspect-ratio: 1/1;
+    width: auto;
     background-color: white;
     justify-content: center;
     margin-left: auto;
@@ -41,7 +61,7 @@
 }
 
 .Pong_Player{
-    width: 450px;
+    width: 500px;
 }
 
 @media (max-width: 900px ) or (pointer: coarse){
