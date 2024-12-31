@@ -93,6 +93,25 @@ export default function AnimationsBall() {
           ball.dy = ball.dy;
           ball.dx = -ball.dx;
         }
+
+        // Bounce off the paddle
+        if (
+          ball.x + ball.dx < player.x + 10 &&
+          ball.y > player.y - 25 &&
+          ball.y < player.y + 25
+        ) {
+          setBall(prev => ({ ...prev, dx: -prev.dx }));
+          setScore(prevScore => prevScore + 1);
+        }
+
+        // Reset if the ball goes out of bounds
+        if (ball.x + ball.dx < 0) {
+          setBall({ x: player.x + 20, y: player.y, dx: 3, dy: 3, moving: false });
+          setScore(0);
+        }
+      } else {
+        // Make the ball follow the paddle
+        setBall(prev => ({ ...prev, x: player.x + 20, y: player.y }));
       }
     };
 
@@ -112,12 +131,10 @@ export default function AnimationsBall() {
       window.cancelAnimationFrame(animationFrameId);
     };
   }, [move]);
-
   const handleMouseMove = (event) => {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
     const mouseY = event.clientY - rect.top;
-
     // Update the paddle position in the ref
     playerRef.current.y = Math.min(Math.max(mouseY, canvas.height / 10), canvas.height - canvas.height / 10);
   };
