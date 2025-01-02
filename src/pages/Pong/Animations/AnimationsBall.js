@@ -46,7 +46,7 @@ export default function AnimationsBall() {
       const ball = ballRef.current;
       context.beginPath();
       context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2); // Draw the ball
-      context.fillStyle = 'red';
+      context.fillStyle = 'black';
       context.fill();
       context.closePath();
     };
@@ -85,7 +85,6 @@ export default function AnimationsBall() {
           ball.y = canvas.height / 2;
           ball.dx = canvas.width / 150;
           ball.dy = canvas.height / 150;
-          setScore(0);
           setMove(false)
         }
 
@@ -139,21 +138,28 @@ export default function AnimationsBall() {
     playerRef.current.y = Math.min(Math.max(mouseY, canvas.height / 10), canvas.height - canvas.height / 10);
   };
 
-  function restartButton() {
-    setMove(!move)
-    setMove(true)
-  }
-
   return (
     <div>
       <canvas
         ref={canvasRef}
         id="Pong_canvas"
-        style={{ border: '1px solid black', maxWidth: "90vw" , height: '60vh', aspectRatio: '1 / 1' }}
+        style={{ margin: "auto", 
+                border: '1px solid black', 
+                minHeight: "400px", 
+                height: '50vh', 
+                maxWidth: "70vw", 
+                aspectRatio: '1 / 1' }}
         onMouseMove={handleMouseMove} // Attach the mouse move handler
-      ></canvas>
-      <button style={{ border: '1px solid black', height: '50px', aspectRatio: '5 / 1', backgroundColor: "red", borderRadius: "10px" }} onClick={restartButton}> 
-          <p style={{ fontSize: "25px", margin: "auto"}}> Start / Restart game </p>
+      />
+      <button style={{ border: '1px solid black', 
+                      height: '50px', aspectRatio: '5 / 1', 
+                      backgroundColor: "red", 
+                      borderRadius: "10px", 
+                      textDecoration: "none"  }} 
+              onClick={() => {setScore(0); setMove(true)}}> 
+          <p style={{ fontSize: "25px", margin: "auto"}}> 
+            Start / Restart game 
+          </p>
         </button>
       <p>Score: {score}</p>
     </div>

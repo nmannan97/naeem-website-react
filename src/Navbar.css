@@ -131,7 +131,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 30%;
+    margin-top: 100px;
     justify-content: center;
   }
 
@@ -150,7 +150,7 @@
 
   /* When the checkbox is checked, slide the menu in */
   .navbar_menu_items.open {
-    transform: translateY(calc(00vh));
+    transform: translateY(calc(0vh));
   }
 
   .navbar_menu_items {
@@ -161,7 +161,7 @@
     height: 100vh;
     margin: auto;
     position: fixed;
-    transform: translateY(calc(-100vh)); /* Initially off-screen */
+    transform: translateY(calc(-130vh)); /* Initially off-screen */
     transition: transform 0.3s ease-in-out; /* Smooth transition for sliding in */
   }
 
@@ -169,7 +169,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30wv;
+    width: 0vw;
     height: 21px;
     cursor: pointer;
     position: absolute;
