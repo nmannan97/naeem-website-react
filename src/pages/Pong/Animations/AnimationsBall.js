@@ -148,7 +148,8 @@ export default function AnimationsBall() {
                 minHeight: "400px", 
                 height: '50vh', 
                 maxWidth: "70vw", 
-                aspectRatio: '1 / 1' }}
+                aspectRatio: '1 / 1',
+                marginTop: "10px" }}
         onMouseMove={handleMouseMove} // Attach the mouse move handler
       />
       <button style={{ border: '1px solid black', 
