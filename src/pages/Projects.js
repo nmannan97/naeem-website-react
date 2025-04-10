@@ -22,8 +22,6 @@ import pipBoy1 from "../assets/pictures/projects/Pipboy/PipBoy2.png";
 import PCB0 from "../assets/pictures/projects/RoboticsClub/PCB,RevC.jpg";
 import PCB1 from "../assets/pictures/projects/RoboticsClub/PCB,RevC2.jpg";
 
-import MITHackathon from '../assets/videos/video1104809264.mp4';
-
 export default function Projects(){
     
     const Images = [ [RadarDish, "Radar dish", "3D printed radar dish with automated testing with embedded systems and Python"],
@@ -58,7 +56,7 @@ export default function Projects(){
                     <li className="projects_ProjectItem">
                         <div className="projects_background">
                             <video id="projects_mithack" width="640" height="480" controls>
-                                <source src={MITHackathon} type="video/mp4"/>
+                                <source src='/video1104809264.mp4' type="video/mp4"/>
                                 Your browser does not support the video tag.
                             </video>
                             <p className="projects_generalFont">
