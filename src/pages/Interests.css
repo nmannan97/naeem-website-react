@@ -75,7 +75,7 @@
     text-align: center;
 }
 
-@media (pointer:none), (pointer:coarse) {
+@media (max-width: 1280px ) and (pointer:coarse) {
 
     #interests{
         background: url("../assets/pictures/Backgroundmain.jpg");

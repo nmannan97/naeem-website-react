@@ -38,7 +38,8 @@
     margin: auto;
     justify-content: center;
     background: rgba(53,56,57,0.65);
-    width: 60%;
+    min-width: 100px;
+    width: 40%;
     border-radius: 17px;
     padding-bottom: 1px;
 }
@@ -49,7 +50,7 @@
     font-size: 1.5rem;
 }
 
-@media (max-width: 900px ) or (pointer: coarse){
+@media (max-width: 1280px ) and (pointer: coarse){
     #contacts{
         padding-top: 100px;
     }

@@ -202,7 +202,7 @@
     font-size: 15px;
 }
 
-@media (max-width: 900px ) or (pointer: coarse){
+@media (max-width: 1280px ) and (pointer: coarse){
     #about_introWelcome{
         font-size: 1.2rem;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
