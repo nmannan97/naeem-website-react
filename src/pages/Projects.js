@@ -56,7 +56,7 @@ export default function Projects(){
                     <li className="projects_ProjectItem">
                         <div className="projects_background">
                             <video id="projects_mithack" width="640" height="480" controls>
-                                <source src='/video1104809264.mp4' type="video/mp4"/>
+                                <source src="/videos/video1104809264.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                             <p className="projects_generalFont">
