@@ -22,6 +22,7 @@ import pipBoy1 from "../assets/pictures/projects/Pipboy/PipBoy2.png";
 import PCB0 from "../assets/pictures/projects/RoboticsClub/PCB,RevC.jpg";
 import PCB1 from "../assets/pictures/projects/RoboticsClub/PCB,RevC2.jpg";
 
+import MITHackathon from '../assets/videos/video1104809264.mp4';
 
 export default function Projects(){
     
@@ -56,12 +57,28 @@ export default function Projects(){
                     </li>
                     <li className="projects_ProjectItem">
                         <div className="projects_background">
+                            <video id="projects_mithack" width="640" height="480" controls>
+                                <source src={MITHackathon} type="video/mp4"/>
+                                Your browser does not support the video tag.
+                            </video>
+                            <p className="projects_generalFont">
+                                This is a hackathon project put up by MIT that was built off making some project with blockchain.
+                                My part was to make a backend that would store user data, this was done with flask, Python, and 
+                                SQL to handle incoming data. My part was done in a sandbox in React and the real site was done with
+                                Next.JS. I also hosted the site on my AWS account to make it live. 
+                            </p>
+                            <a style={{ justifyContent: "center", display: "flex", fontSize: "1.5em", paddingBottom: "30px" }} href="https://main.d3cnevry40mude.amplifyapp.com/">
+                                live site link
+                            </a>
+                        </div>          
+                    </li>
+                    <li className="projects_ProjectItem">
+                        <div className="projects_background">
                             <p className="projects_generalFont">Radar dish ~</p>
                             <div className="projects_Photos">
                                 <div className="projects_projectDiv">
                                     <iframe className="projects_Video" src="https://player.vimeo.com/video/921326896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="auto" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Radar dish demo"></iframe>                            
                                     <p className="projects_projectName">My radar dish</p>
-                                    
                                 </div>  
                                 <div className="projects_projectDiv">
                                     <img className="projects_projectImage" src={RadarDish3}/>

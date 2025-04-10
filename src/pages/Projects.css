@@ -26,6 +26,13 @@
     margin-bottom: 100px;
 }
 
+#projects_mithack{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
 .projects_Video{
     display: block;
     justify-content: center;
