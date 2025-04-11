@@ -31,6 +31,8 @@
     justify-content: center;
     margin: auto;
     padding-bottom: 30px;
+    width: 40vw;
+    height: auto;
 }
 
 .projects_Video{
@@ -136,6 +138,15 @@
     }
     .projects_generalFont{
         font: italic 5vw "Fira Sans", serif;
+    }
+
+    #projects_mithack{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding-bottom: 30px;
+        width: auto;
+        height: 20vh;
     }
 
     .projects_projectName{
