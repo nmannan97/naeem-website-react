@@ -1,0 +1,30 @@
+/* IDs */
+#blackjack{
+    padding-top: 150px;
+    background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
+    background-blend-mode: screen;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+#blackjack_tableBot{
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    width: 80vw;
+    height: 500px;
+    background-color: black;
+}
+
+#blackjack_tableTop{
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    width: 75vw;
+    height: 460px;
+    background-color: green;
+}
+
+/* Class names */

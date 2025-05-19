@@ -5,6 +5,7 @@ import Projects from './pages/Projects';
 import Interests from './pages/Interests'
 import Contacts from './pages/Contacts';
 import Pongpage from './pages/Pongpage';
+import Blackjack from './pages/Blackjack/Blackjack';
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/interests' element={<Interests />}/>
         <Route exact path='/contacts' element={<Contacts />} />
         <Route exact path='/pong' element={<Pongpage />} />
+        <Route exact path='/blackjack' element={<Blackjack />} />
       </Routes>
     </div>
   );
