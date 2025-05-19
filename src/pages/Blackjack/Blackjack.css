@@ -4,27 +4,44 @@
     background: linear-gradient(360deg, #e5de00 47.75%, #7BB4E3 59.21%);
     background-blend-mode: screen;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: calc(100vh - 150px);
 }
 
-#blackjack_tableBot{
-    margin-top: 100px;
-    margin-right: auto;
-    margin-left: auto;
+#blackjack_welcome{
     justify-content: center;
-    width: 80vw;
-    height: 500px;
+    margin: auto;
+}
+
+#blackjack_playarea{
+    margin-top: 40px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    aspect-ratio: 2/1;
     background-color: black;
 }
 
-#blackjack_tableTop{
-    margin-top: 100px;
-    margin-right: auto;
-    margin-left: auto;
+#blackjack_playareaSub{
     justify-content: center;
-    width: 75vw;
-    height: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65vh;
+    aspect-ratio: 2/1;
     background-color: green;
 }
 
-/* Class names */
+/* Classnames */
+@media (max-width: 900px ) or (pointer: coarse){
+    #blackjack{
+        padding-top: 100px;
+        min-height: calc(100vh - 100px);
+    }
+    #blackjack_playarea{
+        margin-top: 40px;
+        aspect-ratio: 6/5;
+    }
+    #blackjack_playareaSub{
+        aspect-ratio: 6/5;
+    }
+}

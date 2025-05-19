@@ -1,24 +1,18 @@
 import React from "react";
+
 import Navbar from "../../Navbar";
 
-import { useState, useEffect } from "react";
+import "./BlackJack.css"
 
-import "./Blackjack.css"
-
-export default function Blackjack(){
-
-    const [hand, setHand] = useState([])
-
-    function cardDispens() {
-        
-    }
+export default function Blackjack() {
 
     return(
         <>
             <Navbar />
             <div id="blackjack">
-                <div id="blackjack_tableBot">
-                    <div id="blackjack_tableTop">
+                <p id="blackjack_welcome">Welcome to my blackjack game!</p>
+                <div id = "blackjack_playarea">
+                    <div id = "blackjack_playareaSub">
 
                     </div>
                 </div>
