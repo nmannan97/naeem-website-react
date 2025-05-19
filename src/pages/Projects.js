@@ -54,6 +54,9 @@ export default function Projects(){
                         <Link  to="/pong"><p id="projects_Pong" className="projects_generalFont">Press to play Pong</p></Link>
                     </li>
                     <li className="projects_ProjectItem">
+                        <Link  to="/blackjack"><p id="projects_bj" className="projects_generalFont">Press to play black jack</p></Link>
+                    </li>
+                    <li className="projects_ProjectItem">
                         <div className="projects_background">
                             <video id="projects_mithack" controls>
                                 <source src="/videos/MITHackVideo.mp4" type="video/mp4" />
