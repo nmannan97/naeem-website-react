@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
+
 import '../Pong.css';
 
 export default function AnimationsBall() {
@@ -7,6 +9,7 @@ export default function AnimationsBall() {
   const ballRef = useRef({ x: 50, y: 200, dx: 2, dy: 2, radius: 0 }); // Ball's position (ref for animation loop)
   const [move, setMove] = useState(false)
   const [score, setScore] = useState(0);
+
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -30,6 +33,8 @@ export default function AnimationsBall() {
         dy: canvas.height / 100,
       };
     };
+  
+    
 
     updateCanvasDimensions();
     window.addEventListener('resize', updateCanvasDimensions);
@@ -130,6 +135,26 @@ export default function AnimationsBall() {
       window.cancelAnimationFrame(animationFrameId);
     };
   }, [move]);
+
+  useEffect(() => {
+    const postScore = async () => {
+      try {
+        const response = await axios.post('http://localhost:5000/submit-score', {
+          score: score
+        });
+        console.log('Score posted:', response.data);
+      } catch (error) {
+        console.error('Failed to post score:', error);
+      }
+    };
+
+    if (score != null && score != 0) {
+      postScore();
+    }
+
+
+  }, [move]);
+
   const handleMouseMove = (event) => {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
@@ -139,30 +164,35 @@ export default function AnimationsBall() {
   };
 
   return (
-    <div>
-      <canvas
-        ref={canvasRef}
-        id="Pong_canvas"
-        style={{ margin: "auto", 
-                border: '1px solid black', 
-                minHeight: "400px", 
-                height: '50vh', 
-                maxWidth: "70vw", 
-                aspectRatio: '1 / 1',
-                marginTop: "10px" }}
-        onMouseMove={handleMouseMove} // Attach the mouse move handler
-      />
-      <button style={{ border: '1px solid black', 
-                      height: '50px', aspectRatio: '5 / 1', 
-                      backgroundColor: "red", 
-                      borderRadius: "10px", 
-                      textDecoration: "none"  }} 
-              onClick={() => {setScore(0); setMove(true)}}> 
-          <p style={{ fontSize: "25px", margin: "auto"}}> 
-            Start / Restart game 
-          </p>
-        </button>
-      <p>Score: {score}</p>
-    </div>
+    <>
+      <div>
+        <canvas
+          ref={canvasRef}
+          id="Pong_canvas"
+          style={{ margin: "auto", 
+                  border: '1px solid black', 
+                  minHeight: "400px", 
+                  height: '50vh', 
+                  maxWidth: "70vw", 
+                  aspectRatio: '1 / 1',
+                  marginTop: "10px" }}
+          onMouseMove={handleMouseMove} // Attach the mouse move handler
+        />
+        <button style={{ border: '1px solid black', 
+                        height: '50px', aspectRatio: '5 / 1', 
+                        backgroundColor: "red", 
+                        borderRadius: "10px", 
+                        textDecoration: "none"  }} 
+                onClick={() => {setScore(0); setMove(true)}}> 
+            <p style={{ fontSize: "25px", margin: "auto"}}> 
+              Start / Restart game 
+            </p>
+          </button>
+        <p>Score: {score}</p>
+        
+      </div>
+      
+    </>
+    
   );
 };

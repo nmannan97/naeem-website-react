@@ -11,8 +11,12 @@
 #Pong_title{
     text-align: center;
 }
-
 /*** User classes ***/
+.Pong_scores{
+    text-align: center;
+    font-size: 2rem;
+}
+
 .Pong_mainContainer{
     font-size: 2.5rem;
     text-align: center;
