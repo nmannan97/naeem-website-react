@@ -11,7 +11,7 @@ export default function Pong(){
     useEffect(() => {
         const fetchScores = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/submit-score');
+            const response = await axios.get('ec2-35-89-227-222.us-west-2.compute.amazonaws.com/submit-score');
             setScores(response.data.scores);  // Update state with top scores
             console.log(scores)
 
@@ -21,6 +21,7 @@ export default function Pong(){
         };
         fetchScores();
     }, [1])
+    
     return(
         <>
             <div id="Pong">
