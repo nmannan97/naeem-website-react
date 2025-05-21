@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "REACT_APP_API_URL=http://<your-ec2-ip>:5000" >> .env
+        - echo "REACT_APP_API_URL=https://www.nmannan.com" >> .env
         - npm install
     build:
       commands:
