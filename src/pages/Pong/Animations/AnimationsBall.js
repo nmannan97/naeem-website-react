@@ -152,7 +152,6 @@ export default function AnimationsBall() {
       postScore();
     }
 
-
   }, [move]);
 
   const handleMouseMove = (event) => {
