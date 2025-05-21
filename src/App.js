@@ -5,7 +5,7 @@ import Projects from './pages/Projects';
 import Interests from './pages/Interests'
 import Contacts from './pages/Contacts';
 import Pongpage from './pages/Pongpage';
-import BlackJack from './pages/BlackJack/BlackJack';
+import BlackJack from './pages/Blackjack/Blackjack';
 
 import './App.css';
 
