@@ -18,7 +18,7 @@ function App() {
         <Route exact path='/interests' element={<Interests />}/>
         <Route exact path='/contacts' element={<Contacts />} />
         <Route exact path='/pong' element={<Pongpage />} />
-        <Route exact path='/blackjack' element={<Blackjack />} />
+        <Route exact path='/blackjack' element={<BlackJack />} />
       </Routes>
     </div>
   );
