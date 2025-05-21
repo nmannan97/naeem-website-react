@@ -1,0 +1,14 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "REACT_APP_API_URL=http://35.89.227.222:5000" >> .env
+        - yarn install --no-cache
+    build:
+      commands:
+        - yarn build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
