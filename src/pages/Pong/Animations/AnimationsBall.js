@@ -139,7 +139,7 @@ export default function AnimationsBall() {
   useEffect(() => {
     const postScore = async () => {
       try {
-        const response = await axios.post('ec2-35-89-227-222.us-west-2.compute.amazonaws.com/submit-score', {
+        const response = await axios.post('http://35.89.227.222:5000/submit-score', {
           score: score
         });
         console.log('Score posted:', response.data);
