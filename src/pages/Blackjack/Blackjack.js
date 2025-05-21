@@ -13,7 +13,7 @@ export default function BlackJack() {
                 <p id="blackjack_welcome">Welcome to my blackjack game!</p>
                 <div id = "blackjack_playarea">
                     <div id = "blackjack_playareaSub">
- 
+
                     </div>
                 </div>
             </div>
