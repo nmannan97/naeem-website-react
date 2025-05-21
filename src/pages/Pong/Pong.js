@@ -37,8 +37,9 @@ export default function Pong(){
                 <p className="Pong_scores" >Top scores:</p>
                 <div id="Pong_scoreContainer" style={{ display: 'flex', justifyContent: 'center' }}>
                     <ol>
-                        {scores.map((score, index) => (
-                        <li key={index}>Score: {score}</li>
+                        {Array.isArray(scores) &&
+                            scores.map((score, index) => (
+                            <li key={index}>Score: {score}</li>
                         ))}
                     </ol>
                 </div>
