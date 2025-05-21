@@ -10,17 +10,16 @@ export default function Pong(){
 
     useEffect(() => {
         const fetchScores = async () => {
-        try {
+            try {
             const response = await axios.get(`${process.env.REACT_APP_API_URL}/submit-score`);
-            setScores(response.data.scores);  // Update state with top scores
-            console.log(scores)
-
-        } catch (error) {
+            setScores(response.data.scores);
+            } catch (error) {
             console.error('Error fetching scores:', error);
-        }
+            }
         };
         fetchScores();
-    }, [])
+    }, []);
+
     
     return(
         <>
