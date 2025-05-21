@@ -11,7 +11,7 @@ export default function Pong(){
     useEffect(() => {
         const fetchScores = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/submit-score');
+            const response = await axios.get('http://35.89.227.222:5000/submit-score');
             setScores(response.data.scores);  // Update state with top scores
             console.log(scores)
 
@@ -21,6 +21,7 @@ export default function Pong(){
         };
         fetchScores();
     }, [1])
+    
     return(
         <>
             <div id="Pong">
@@ -30,8 +31,8 @@ export default function Pong(){
                         <Ball />
                     </div>  
                 </div> 
-                <p className="Pong_scores">Top scores:</p>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <p className="Pong_scores" >Top scores:</p>
+                <div id="Pong_scoreContainer" style={{ display: 'flex', justifyContent: 'center' }}>
                     <ol>
                         {scores.map((score, index) => (
                         <li key={index}>Score: {score}</li>
