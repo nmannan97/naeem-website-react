@@ -21,7 +21,7 @@ export default function Pong(){
         };
         fetchScores();
     }, [1])
-
+    
     return(
         <>
             <div id="Pong">
