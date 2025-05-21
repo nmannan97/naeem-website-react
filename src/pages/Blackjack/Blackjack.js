@@ -4,7 +4,7 @@ import Navbar from "../../Navbar";
 
 import "./BlackJack.css"
 
-export default function Blackjack() {
+export default function BlackJack() {
 
     return(
         <>
