@@ -20,7 +20,7 @@ export default function Pong(){
         }
         };
         fetchScores();
-    }, [1])
+    }, [])
     
     return(
         <>
