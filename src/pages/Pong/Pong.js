@@ -11,10 +11,12 @@ export default function Pong(){
     useEffect(() => {
         const fetchScores = async () => {
             try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/submit-score`);
-            setScores(response.data.scores);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/submit-score`);
+                console.log("API base URL:", process.env.REACT_APP_API_URL);
+
+                setScores(response.data.scores);
             } catch (error) {
-            console.error('Error fetching scores:', error);
+                console.error('Error fetching scores:', error);
             }
         };
         fetchScores();
@@ -43,8 +45,3 @@ export default function Pong(){
         </>  
     );
 }
-
-/*
-
-    
-*/

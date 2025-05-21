@@ -142,6 +142,10 @@ export default function AnimationsBall() {
       try {
         const response = await axios.post(`${process.env.REACT_APP_API_URL}/submit-score`, {
           score: score
+        }, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
         });
         console.log('Score posted:', response.data);
       } catch (error) {
