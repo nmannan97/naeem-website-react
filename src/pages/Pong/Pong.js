@@ -9,9 +9,12 @@ export default function Pong(){
     const [scores, setScores] = useState([]);
 
     useEffect(() => {
+
+        const API_URL = process.env.REACT_APP_API_URL;
+
         const fetchScores = async () => {
         try {
-            const response = await axios.get('http://35.89.227.222:5000/submit-score');
+            const response = await axios.get(`${API_URL}/submit-score`);
             setScores(response.data.scores);  // Update state with top scores
             console.log(scores)
 
