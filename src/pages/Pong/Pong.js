@@ -31,8 +31,8 @@ export default function Pong(){
                         <Ball />
                     </div>  
                 </div> 
-                <p className="Pong_scores">Top scores:</p>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <p className="Pong_scores" >Top scores:</p>
+                <div id="Pong_scoreContainer" style={{ display: 'flex', justifyContent: 'center' }}>
                     <ol>
                         {scores.map((score, index) => (
                         <li key={index}>Score: {score}</li>

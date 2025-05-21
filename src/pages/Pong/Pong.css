@@ -3,18 +3,34 @@
     display: flex;
     width: 500px;
 }
+
 #Pong_container2{
     display: block;
     margin: auto;
     justify-content: center;
 }
+
 #Pong_title{
     text-align: center;
 }
+
+#Pong_scoreContainer{
+    background-color: whitesmoke;
+    width: 700px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
 /*** User classes ***/
 .Pong_scores{
     text-align: center;
     font-size: 2rem;
+    background-color: whitesmoke;
+    width: 700px;
+    justify-content: center;
+    margin: auto;
 }
 
 .Pong_mainContainer{
