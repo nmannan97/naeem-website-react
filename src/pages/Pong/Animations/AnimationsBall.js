@@ -5,7 +5,7 @@ import '../Pong.css';
 
 export default function AnimationsBall() {
   const canvasRef = useRef(null);
-  const playerRef = useRef({ x: 20, y: 200 }); // Paddle's position (ref for animation loop)
+  const playerRef = useRef({ x: 45, y: 200 }); // Paddle's position (ref for animation loop)
   const ballRef = useRef({ x: 50, y: 200, dx: 2, dy: 2, radius: 0 }); // Ball's position (ref for animation loop)
   const [move, setMove] = useState(false)
   const [score, setScore] = useState(0);
