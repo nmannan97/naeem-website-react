@@ -8,7 +8,7 @@ export default function Pong(){
     
     const [scores, setScores] = useState([]);
 
-    const API_BASE = process.env.REACT_APP_API_BASE;
+    const API_BASE = process.env.API_BASE;
 
     useEffect(() => {
         if (!API_BASE) {

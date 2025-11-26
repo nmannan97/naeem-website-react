@@ -137,21 +137,17 @@ export default function AnimationsBall() {
   }, [move]);
 
   useEffect(() => {
+    if (!API_BASE) {
+      console.error("API base URL missing");
+      return;
+    }
 
-    const postScore = async () => {
-      try {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/submit-score`, {
-          score: score
-        }, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        console.log('Score posted:', response.data);
-      } catch (error) {
-        console.error('Failed to post score:', error);
-      }
-    };
+    if (score > 0 && !move) {
+      axios.post(`${API_BASE}/submit-score`, { score })
+        .then(res => console.log('Score posted:', res.data))
+        .catch(err => console.error('Failed to post score:', err));
+    }
+  }, [score, move]);
 
     if (score != null && score != 0) {
       postScore();
