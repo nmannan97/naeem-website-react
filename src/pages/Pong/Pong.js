@@ -8,19 +8,19 @@ export default function Pong(){
     
     const [scores, setScores] = useState([]);
 
-    useEffect(() => {
-        const fetchScores = async () => {
-            try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/submit-score`);
-                console.log("API base URL:", process.env.REACT_APP_API_URL);
+    const API_BASE = process.env.REACT_APP_API_BASE;
 
-                setScores(response.data.scores);
-            } catch (error) {
-                console.error('Error fetching scores:', error);
-            }
-        };
-        fetchScores();
+    useEffect(() => {
+        if (!API_BASE) {
+            console.error("API base URL is missing");
+            return;
+        }
+
+        axios.get(`${API_BASE}/submit-score`)
+            .then(res => setScores(res.data.scores))
+            .catch(err => console.error(err));
     }, []);
+
 
     
     return(
