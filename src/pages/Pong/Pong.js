@@ -11,7 +11,7 @@ export default function Pong(){
     useEffect(() => {
         const fetchScores = async () => {
         try {
-            const response = await axios.get('http://35.89.227.222:5000/submit-score');
+            const response = await axios.get('https://api.nmannan.com/submit-score');
             setScores(response.data.scores);  // Update state with top scores
             console.log(scores)
 
