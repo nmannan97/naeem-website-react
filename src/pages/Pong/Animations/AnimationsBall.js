@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
-
 import '../Pong.css';
+
+const API_BASE = process.env.REACT_APP_API_URL;
+
+export default function AnimationsBall() {
 
 export default function AnimationsBall() {
   const canvasRef = useRef(null);
