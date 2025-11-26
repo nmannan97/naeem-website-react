@@ -137,23 +137,17 @@ export default function AnimationsBall() {
   }, [move]);
 
   useEffect(() => {
-    if (!API_BASE) {
-      console.error("API base URL missing");
-      return;
-    }
+      if (!API_BASE) {
+        console.error("API base URL missing");
+        return;
+      }
 
-    if (score > 0 && !move) {
-      axios.post(`${API_BASE}/submit-score`, { score })
-        .then(res => console.log('Score posted:', res.data))
-        .catch(err => console.error('Failed to post score:', err));
-    }
+      if (score > 0 && !move) {
+        axios.post(`${API_BASE}/submit-score`, { score })
+          .then(res => console.log('Score posted:', res.data))
+          .catch(err => console.error('Failed to post score:', err));
+      }
   }, [score, move]);
-
-    if (score != null && score != 0) {
-      postScore();
-    }
-
-  }, [move]);
 
   const handleMouseMove = (event) => {
     const canvas = canvasRef.current;
