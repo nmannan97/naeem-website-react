@@ -66,6 +66,7 @@ export default function Projects(){
                                 muted
                                 loop
                                 playsInline
+                                style={{ borderRadius: "12px" }}
                             >
                                     <source
                                         src="https://nmannan-videos.s3.us-west-2.amazonaws.com/MITHackVideo.mp4"
