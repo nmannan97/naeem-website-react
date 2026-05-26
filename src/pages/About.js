@@ -68,9 +68,7 @@ export default function About(){
                         </li>
                     </ul>
                 </div>
-                <div className="about_background">
-                    <p className="about_generalFont"> Places I worked at over the years, including internships, contracts, and full time positions:</p>
-                </div>
+
  
             </div>  
             <Footer/>
@@ -79,7 +77,10 @@ export default function About(){
 }
 
 /**
- *              <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
+ *                 <div className="about_background">
+                    <p className="about_generalFont"> Places I worked at over the years, including internships, contracts, and full time positions:</p>
+                </div>        
+ *      <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
                     {Images.map((photos, index) => (
                         <div className="about_polaroid1" key={index}>
                             <br />
