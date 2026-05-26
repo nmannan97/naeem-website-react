@@ -58,8 +58,15 @@ export default function Projects(){
                     </li>
                     <li className="projects_ProjectItem">
                         <div className="projects_background">
-                            <video id="projects_mithack" controls>
-                                <source src="/videos/MITHackVideo.mp4" type="video/mp4" />
+                            <video
+                                id="projects_mithack" controls
+                                className="hero-video"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                            >
+                                    <source src="/videos/demo.mp4" type="video/mp4" />
                             </video>
                             <p className="projects_generalFont">
                                 This is a hackathon project put up by MIT that was built off making some project with blockchain.
