@@ -71,22 +71,24 @@ export default function About(){
                 <div className="about_background">
                     <p className="about_generalFont"> Places I worked at over the years, including internships, contracts, and full time positions:</p>
                 </div>
-                    <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
-                        {Images.map((photos, index) => (
-                            <div className="about_polaroid1" key={index}>
-                                <br />
-                                <div className="about_workPlaces">
-                                    <img src={photos[0]} alt={`Image ${index}`} />   
-                                </div>
-                                <p className="about_workNames"> {photos[1]} </p>
-                                <p className="about_workNameJob"> Job title: {photos[2]} </p>
-                            </div>
-                        ))}
-                    </Carousel>
-                    
+ 
             </div>  
             <Footer/>
         </>
     )
 }
 
+/**
+ *              <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
+                    {Images.map((photos, index) => (
+                        <div className="about_polaroid1" key={index}>
+                            <br />
+                            <div className="about_workPlaces">
+                                <img src={photos[0]} alt={`Image ${index}`} />   
+                            </div>
+                            <p className="about_workNames"> {photos[1]} </p>
+                            <p className="about_workNameJob"> Job title: {photos[2]} </p>
+                        </div>
+                    ))}
+                </Carousel>    
+ */
