@@ -54,7 +54,7 @@ export default function Projects(){
                         <Link  to="/pong"><p id="projects_Pong" className="projects_generalFont">Press to play Pong</p></Link>
                     </li>
                     <li className="projects_ProjectItem">
-                        <Link  to="/blackjack"><p id="projects_bj" className="projects_generalFont">Press to play black jack</p></Link>
+                        <Link to="/"><p id="projects_blackjack" className="projects_generalFont">Current game in progress</p></Link>
                     </li>
                     <li className="projects_ProjectItem">
                         <div className="projects_background">
