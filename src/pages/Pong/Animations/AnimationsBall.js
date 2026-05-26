@@ -5,8 +5,6 @@ import '../Pong.css';
 const API_BASE = process.env.REACT_APP_API_URL;
 
 export default function AnimationsBall() {
-
-export default function AnimationsBall() {
   const canvasRef = useRef(null);
   const playerRef = useRef({ x: 45, y: 200 }); // Paddle's position (ref for animation loop)
   const ballRef = useRef({ x: 50, y: 200, dx: 2, dy: 2, radius: 0 }); // Ball's position (ref for animation loop)
