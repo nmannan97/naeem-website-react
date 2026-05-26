@@ -3,7 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "REACT_APP_API_URL=https://api.nmannan.com" >> .env
+        - rm -f .env
+        - echo "REACT_APP_API_URL=https://api.nmannan.com" > .env
         - npm install
     build:
       commands:

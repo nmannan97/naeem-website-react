@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
-
 import '../Pong.css';
+
+const API_BASE = process.env.REACT_APP_API_URL;
+
+export default function AnimationsBall() {
 
 export default function AnimationsBall() {
   const canvasRef = useRef(null);
@@ -137,27 +140,17 @@ export default function AnimationsBall() {
   }, [move]);
 
   useEffect(() => {
-
-    const postScore = async () => {
-      try {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/submit-score`, {
-          score: score
-        }, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        console.log('Score posted:', response.data);
-      } catch (error) {
-        console.error('Failed to post score:', error);
+      if (!API_BASE) {
+        console.error("API base URL missing");
+        return;
       }
-    };
 
-    if (score != null && score != 0) {
-      postScore();
-    }
-
-  }, [move]);
+      if (score > 0 && !move) {
+        axios.post(`${API_BASE}/submit-score`, { score })
+          .then(res => console.log('Score posted:', res.data))
+          .catch(err => console.error('Failed to post score:', err));
+      }
+  }, [score, move]);
 
   const handleMouseMove = (event) => {
     const canvas = canvasRef.current;
