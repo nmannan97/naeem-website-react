@@ -68,8 +68,9 @@ export default function Projects(){
                                 playsInline
                             >
                                     <source
-                                        id="projects_mithackVideo"
-                                        src="https://nmannan-videos.s3.amazonaws.com/demo.mp4" type="video/mp4" />
+                                        src="https://nmannan-videos.s3.us-west-2.amazonaws.com/MITHackVideo.mp4"
+                                        type="video/mp4"
+                                    />
                             </video>
                             <p className="projects_generalFont">
                                 This is a hackathon project put up by MIT that was built off making some project with blockchain.
