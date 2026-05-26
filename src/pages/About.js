@@ -77,7 +77,8 @@ export default function About(){
 }
 
 /**
- *                 <div className="about_background">
+ *   Work place carousol parts
+ *                  <div className="about_background">
                     <p className="about_generalFont"> Places I worked at over the years, including internships, contracts, and full time positions:</p>
                 </div>        
  *      <Carousel autoPlay={true} interval={2500} showThumbs={false} infiniteLoop={true} className="about_aboutWork">
